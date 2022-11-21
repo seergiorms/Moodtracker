@@ -1,3 +1,6 @@
+float buttonW = 300;
+float buttonH = 100;
+
 class Button {
 
   // Propietats d'un botó:
@@ -72,4 +75,15 @@ class Button {
       (mouseY>= this.y) &&
       (mouseY<= this.y + this.h);
   }
+}
+
+void updateCursor(){
+  
+  // Si està sobre algun botó (b1, b2 o b3) i està abilitat
+  if((b1.mouseOverButton() && b1.enabled)){
+      cursor(HAND);
+  }
+  else {
+     cursor(ARROW);
+  } 
 }
