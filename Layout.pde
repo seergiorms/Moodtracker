@@ -4,9 +4,11 @@ float margrecH = 1000,
 // Dimensions Banner
 float recuadreWidth  = 800,
   recuadreHeight = 900;
-  
-  float margusuarioH =  margrecH + 70,
+
+float margusuarioH =  margrecH + 70,
   margusuarioV = margrecV + 400;
-  
-  float usuarioWidth = 660, 
+
+float usuarioWidth = 660,
   usuarioHeight = 50;
+  
+  float nombreWidth = usuarioWidth/2 - 10;

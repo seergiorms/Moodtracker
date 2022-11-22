@@ -9,45 +9,28 @@ PImage[] pic;
 
 // Estableix les imatges de l'App
 void setMedias() {
-  this.pic = new PImage[1];
+  this.pic = new PImage[7];
   this.pic[0] = loadImage("/Fondo1.png");
-
-  this.lgo = new PShape[13];
-  this.lgo[0] = loadShape("/Sprite-círculoamarillo.svg");
-  this.lgo[1] = loadShape("/Sprite-círculonaranja.svg");
-  this.lgo[2] = loadShape("/Sprite-círculorosa.svg");
-  this.lgo[3] = loadShape("/Sprite-círculolila.svg");
-  this.lgo[4] = loadShape("/Sprite-círculoazul.svg");
-  this.lgo[5] = loadShape("/Sprite-círculoamarillog.svg");
-  this.lgo[6] = loadShape("/Sprite-círculonaranjag.svg");
-  this.lgo[7] = loadShape("/Sprite-círculorosag.svg");
-  this.lgo[8] = loadShape("/Sprite-círculolilag.svg");
-  this.lgo[9] = loadShape("/Sprite-círculoazulg.svg");
-  this.lgo[10] = loadShape("/FotoPerfil.svg");
-  this.lgo[11] = loadShape("/Botoncuad.svg");
-  this.lgo[12] = loadShape("/Botoncuad1.svg");
+  this.pic[1] = loadImage("meh.png");
+  this.pic[2] = loadImage("dead.png");
+  this.pic[3] = loadImage("sad.png");
+  this.pic[4] = loadImage("laugh.png");
+  this.pic[5] = loadImage("tongue.png");
+  this.pic[6] = loadImage("profile.jpg");
 }
 
 // Getter del número d'imatges
 int getNumImatges() {
-  return this.lgo.length;
+  return this.pic.length;
 }
 
 // Getter de la imatge i-èssima
-PShape getImgAt(int i) {
-  return this.lgo[i];
-}
-
-PImage getPicAt(int i) {
+PImage getImgAt(int i) {
   return this.pic[i];
 }
 
 
 // Dibuixa la imatge i-èssima
 void displayImg(int i, float x, float y, float w, float h) {
-  shape(getImgAt(i), x, y, w, h);
-}
-
-void displayPic(int i, float x, float y, float w, float h) {
-  image(getPicAt(i), x, y, w, h);
+  image(getImgAt(i), x, y, w, h);
 }

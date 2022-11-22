@@ -11,10 +11,10 @@ void Recuadreinici() {
   text("Inicio de sesión", margrecH + 70, margrecV + 110);
 }
 
-void FotoPerfil(){
-  shapeMode(CENTER);
+void FotoPerfil() {
   pushStyle();
-  shape(getImgAt(10), margrecH + recuadreWidth/2, margrecV + 260, 165, 165);
+  imageMode(CENTER);
+  image(getImgAt(6), margrecH + recuadreWidth/2, margrecV + 260, 190, 190);
   popStyle();
 }
 
@@ -25,10 +25,24 @@ void Usuario() {
   stroke(0);
   rect(margusuarioH, margusuarioV, usuarioWidth, usuarioHeight, 30, 30, 30, 30);
   popStyle();
-   textFont(getFontAt(1));
-  textSize(20);
-  fill(100);
-  text("Usuario", margusuarioH + 20, margusuarioV + 33);
+}
+
+void Usuario2() {
+  shapeMode(CENTER);
+  pushStyle();
+  fill(255);
+  stroke(0);
+  rect(margusuarioH, margusuarioV, usuarioWidth/2, usuarioHeight, 30, 30, 30, 30);
+  popStyle();
+}
+
+void Nombre() {
+  shapeMode(CENTER);
+  pushStyle();
+  fill(255);
+  stroke(0);
+  rect(margusuarioH, margusuarioV, nombreWidth, usuarioHeight, 30, 30, 30, 30);
+  popStyle();
 }
 
 void Contraseña() {
@@ -38,8 +52,4 @@ void Contraseña() {
   stroke(0);
   rect(margusuarioH, margusuarioV + 70, usuarioWidth, usuarioHeight, 30, 30, 30, 30);
   popStyle();
-   textFont(getFontAt(1));
-  textSize(20);
-  fill(100);
-  text("Contraseña", margusuarioH + 20, margusuarioV + 103);
 }
