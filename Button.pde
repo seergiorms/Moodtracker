@@ -1,5 +1,3 @@
-float buttonW = 300;
-float buttonH = 100;
 
 class Button {
 
@@ -25,6 +23,16 @@ class Button {
     fillColorOver = color(255);
     fillColorDisabled = color(150);
     strokeColor = color(getColorAt(4));
+  }
+  
+   RadioButton(int x, int y, int r){
+    this.x = x;
+    this.y = y;
+    this.r = r;
+    this.checked = false;
+    this.bgColor = color(255);
+    this.borderColor = color(0);
+    this.checkedColor = color(180);
   }
 
   // Setters
@@ -75,15 +83,4 @@ class Button {
       (mouseY>= this.y) &&
       (mouseY<= this.y + this.h);
   }
-}
-
-void updateCursor(){
-  
-  // Si està sobre algun botó (b1, b2 o b3) i està abilitat
-  if((b1.mouseOverButton() && b1.enabled)){
-      cursor(HAND);
-  }
-  else {
-     cursor(ARROW);
-  } 
 }

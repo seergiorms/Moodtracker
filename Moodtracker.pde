@@ -1,5 +1,4 @@
-Button b1;
-TextField userText, passText;
+
 boolean logged = false;
 
 // Dimensions dels botons
@@ -12,6 +11,7 @@ void setup() {
   setColors();
   setFonts();
   setMedias();
+  setGUI();
 }
 
 
@@ -24,18 +24,27 @@ void draw() {
   case CONTRASEÑA:
     dibujaPantallaContraseña();
     break;
-  case CONTRASEÑA2:
-    dibujaPantallaContraseña2();
+  case INICIO:
+    dibujaPantallaInicio();
     break;
   }
 
-  updateCursor();   // Modifica l'aparença del cursor
+  updateCursor();
+
+pushStyle();
+  if (comprovaLogin() == false) {
+    fill(250);
+    textAlign(CENTER);
+    text("ERROR AL INICIAR SESIÓN :(",margrecH + (recuadreWidth/2) , 230);
+  }
+  popStyle();
 }
 
-// En cas de pitjar el ratolí
-void mousePressed() {
-
-  if (b1.mouseOverButton() && b1.enabled) {
-    pantalla = PANTALLA.CONTRASEÑA2;
+boolean comprovaLogin() {
+  if ( userText.text.equals("admin") &&
+    passText.text.equals("1234")) {
+    return true;
+  } else {
+    return false;
   }
 }
