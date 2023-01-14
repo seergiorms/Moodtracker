@@ -2,7 +2,7 @@ Button [] buttons;
 
 TextField userText, passText;
 
-Button b1, inicio, resumen, personas, estadisticas, perfil, ajustes;
+Button b1, inicio, resumen, personas, estadisticas, perfil, ajustes, siguiente;
 
 void setGUI() {
   initButtons();
@@ -11,7 +11,7 @@ void setGUI() {
 }
 
 void initButtons() {
-  buttons = new Button[7];
+  buttons = new Button[8];
   buttons [0] = new Button ("Hecho", margrecH + recuadreWidth/2+ 50, height-margrecV-126, buttonW, buttonH);
   buttons [1] = new Button("Inicio", 0, 60, buttonW, buttonH);
   buttons [2] = new Button("Resumen", 16, 60 + buttonH, buttonW, buttonH);
@@ -19,6 +19,7 @@ void initButtons() {
   buttons [4] = new Button("Estadísticas", 64, 60 + (3*buttonH), buttonW+36, buttonH);
   buttons [5] = new Button("Perfil", 0, 60 + (4*buttonH), buttonW, buttonH);
   buttons [6] = new Button("Ajustes",16, 60 + (5*buttonH), buttonW, buttonH);
+  buttons [7] = new Button("Siguiente", margrecH + recuadreWidth/2 + 50, height - margrecV - 118, buttonW, buttonH);
   
 
 
@@ -29,6 +30,7 @@ void initButtons() {
   estadisticas = buttons[4];
   perfil = buttons[5];
   ajustes = buttons[6];
+  siguiente = buttons[7];
 
 }
 
@@ -56,10 +58,12 @@ void disableButtons() {
 }
 void enableButtonsIniciales() {
   b1.setEnabled(true);
+  siguiente.setEnabled(true);
 }
 
 void displayButtonsIniciales() {
   b1.display1();
+  siguiente.display1();
 }
 
 void enableButtonsMenu(){

@@ -64,7 +64,6 @@ void Bannerinici() {
   noStroke();
   fill(255);
   rect(0, 0, banneriWidth, banneriHeight);
-
   popStyle();
 }
 

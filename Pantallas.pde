@@ -26,6 +26,8 @@ void dibujaPantallaInicio() {
   RecuadEmo();
   displayButtonsMenu();
   enableButtonsMenu();
+  displayButtonsIniciales();
+  enableButtonsIniciales();
   popStyle();
 }
 
