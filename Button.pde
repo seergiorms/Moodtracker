@@ -1,15 +1,13 @@
 
 class Button {
-
   // Propietats d'un botó:
-  float x, y, w, h;  // Posició i dimensions
-
+  float x, y, w, h, r;  // Posició i dimensions
   // Colors de contorn, farciment, actiu i desactiu
-  color fillColor, strokeColor;
-  color fillColorOver, fillColorDisabled;
+  color fillColor1, strokeColor1, fillColor2, strokeColor2;
+  color fillColorOver1, fillColorDisabled, bgColor, borderColor, checkedColor, fillColorOver2;
 
   String textBoto;  // Text
-  boolean enabled;  // Abilitat / desabilitat
+  boolean enabled, checked;  // Abilitat / desabilitat
 
   // Mètode Constructor
   Button(String text, float x, float y, float w, float h) {
@@ -19,21 +17,16 @@ class Button {
     this.w = w;
     this.h = h;
     this.enabled = true;
-    fillColor = color(getColorAt(4));
-    fillColorOver = color(255);
+    fillColor1 = color(getColorAt(4));
+    fillColorOver1 = color(getColorAt(5));
     fillColorDisabled = color(150);
-    strokeColor = color(getColorAt(4));
+    strokeColor1 = color(getColorAt(4));
+
+    fillColor2 = color(getColorAt(5));
+    fillColorOver2 = color(getColorAt(5));
+    strokeColor2 = color(255);
   }
-  
-   RadioButton(int x, int y, int r){
-    this.x = x;
-    this.y = y;
-    this.r = r;
-    this.checked = false;
-    this.bgColor = color(255);
-    this.borderColor = color(0);
-    this.checkedColor = color(180);
-  }
+
 
   // Setters
 
@@ -42,23 +35,22 @@ class Button {
   }
 
   // Dibuixa el botó
-  void display() {
+  void display1() {
     pushStyle();
     if (!enabled) {
       fill(fillColorDisabled);  // Color desabilitat
     } else if (mouseOverButton()) {
-      fill(fillColorOver);      // Color quan ratolí a sobre
+      fill(fillColorOver1);      // Color quan ratolí a sobre
     } else {
-      fill(fillColor);          // Color actiu però ratolí fora
+      fill(fillColor1);          // Color actiu però ratolí fora
     }
-    stroke(strokeColor);
+    stroke(strokeColor1);
     strokeWeight(2);        //Color i gruixa del contorn
     rect(this.x, this.y, this.w, this.h, 10);    // Rectangle del botó
-
     // Text (color, alineació i mida)
 
     if (!enabled) {
-      fill(255);
+      fill(getColorAt(5));
       textAlign(CENTER);
       textSize(30);
       text(textBoto, this.x + this.w/2, this.y + this.h/2 + 10);
@@ -68,9 +60,41 @@ class Button {
       textSize(30);
       text(textBoto, this.x + this.w/2, this.y + this.h/2 + 10);
     } else {
-      fill(255);
+      fill(getColorAt(5));
       textAlign(CENTER);
       textSize(30);
+      text(textBoto, this.x + this.w/2, this.y + this.h/2 + 10);
+    }
+    popStyle();
+  }
+
+  void display2() {
+    pushStyle();
+    if (!enabled) {
+      fill(fillColorDisabled);  // Color desabilitat
+    } else if (mouseOverButton()) {
+      fill(fillColorOver2);      // Color quan ratolí a sobre
+    } else {
+      fill(fillColor2);          // Color actiu però ratolí fora
+    }
+    stroke(strokeColor2);
+    strokeWeight(2);        //Color i gruixa del contorn
+    rect(this.x, this.y, this.w, this.h, 10);    // Rectangle del botó
+    // Text (color, alineació i mida)
+
+    if (!enabled) {
+      fill(getColorAt(6));
+      textAlign(CENTER);
+      textSize(40);
+      text(textBoto, this.x + this.w/2, this.y + this.h/2 + 10);
+    } else if (mouseOverButton()) {
+      fill(getColorAt(2));
+      textSize(50);
+      text(textBoto, this.x + this.w/2, this.y + this.h/2 + 10);
+    } else {
+      fill(getColorAt(6));
+      textAlign(CENTER);
+      textSize(40);
       text(textBoto, this.x + this.w/2, this.y + this.h/2 + 10);
     }
     popStyle();

@@ -1,12 +1,14 @@
 color[] colors;
 
 void setColors() {
-  this.colors = new color[5];
+  this.colors = new color[7];
   this.colors[0] = color(#F2AE49);//amarillo
   this.colors[1] = color(#F27A57);//naranja
   this.colors[2] = color(#F25C78);//rosa
   this.colors[3] = color(#7D6ED0);//lila
   this.colors[4] = color(#51CFC0);//azul
+  this.colors[5] = color(255);    //blanco
+  this.colors[6] = color(0);      //negro
 }
 
 

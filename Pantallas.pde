@@ -1,12 +1,12 @@
 enum PANTALLA {
-  CONTRASEÑA, INICIO
+  CONTRASEÑA, INICIO, RESUMEN, PERSONAS, ESTADISTICAS, PERFIL, AJUSTES
 };
 
 // Pantalla actual
 PANTALLA pantalla = PANTALLA.CONTRASEÑA;
 
 void dibujaPantallaContraseña() {
- pushStyle();
+  pushStyle();
   displayImg(0, 0, 0, width, height);
   Recuadreinici();
   FotoPerfil();
@@ -24,6 +24,39 @@ void dibujaPantallaInicio() {
   displayImg(7, 0, 0, width, height);
   Bannerinici();
   RecuadEmo();
-  
+  displayButtonsMenu();
+  enableButtonsMenu();
   popStyle();
+}
+
+void dibujaPantallaResumen() {
+  pushStyle();
+  displayImg(7, 0, 0, width, height);
+  Bannerinici();
+  displayButtonsMenu();
+  enableButtonsMenu();
+  popStyle();
+}
+
+void dibujaPantallaPersonas() {
+  pushStyle();
+  displayImg(7, 0, 0, width, height);
+  Bannerinici();
+  displayButtonsMenu();
+  enableButtonsMenu();
+  popStyle();
+}
+void dibujaPantallaEstadisticas() {
+  pushStyle();
+  displayImg(7, 0, 0, width, height);
+  Bannerinici();
+  displayButtonsMenu();
+  enableButtonsMenu();
+  popStyle();
+}
+
+void dibujaPantallaPerfil(){
+}
+
+void dibujaPantallaAjustes(){
 }

@@ -33,3 +33,4 @@ float usuariomarg = margrecH;
 
 float banneriWidth = 750,
       banneriHeight = 1080;
+    

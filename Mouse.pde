@@ -3,7 +3,15 @@ void mousePressed() {
 
   if (b1.mouseOverButton() && b1.enabled) {
     pantalla = PANTALLA.INICIO;
-  }
+  } else if (inicio.mouseOverButton() && inicio.enabled){
+    pantalla = PANTALLA.INICIO;
+  } else if (resumen.mouseOverButton() && resumen.enabled){
+    pantalla = PANTALLA.RESUMEN;
+  } else if (estadisticas.mouseOverButton() && estadisticas.enabled){
+    pantalla = PANTALLA.ESTADISTICAS;
+  } else if (perfil.mouseOverButton() && perfil.enabled){
+    pantalla = PANTALLA.PERFIL;
+  } else if (ajustes.mouseOverButton() && ajustes.enabled){
 
   userText.isPressed();
   passText.isPressed();

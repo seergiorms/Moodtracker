@@ -24,20 +24,34 @@ void draw() {
   case CONTRASEÑA:
     dibujaPantallaContraseña();
     break;
+
   case INICIO:
     dibujaPantallaInicio();
     break;
+    
+    case RESUMEN:
+    dibujaPantallaResumen();
+    break;
+    
+    case PERSONAS: 
+    dibujaPantallaPersonas();
+    break;
+    
+    case ESTADISTICAS:
+    dibujaPantallaEstadisticas();
+    break;
+    
+    case PERFIL:
+    dibujaPantallaPerfil();
+    break;
+    
+    case AJUSTES:
+    dibujaPantallaAjustes();
+    break;
   }
+  
 
   updateCursor();
-
-pushStyle();
-  if (comprovaLogin() == false) {
-    fill(250);
-    textAlign(CENTER);
-    text("ERROR AL INICIAR SESIÓN :(",margrecH + (recuadreWidth/2) , 230);
-  }
-  popStyle();
 }
 
 boolean comprovaLogin() {

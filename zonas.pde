@@ -70,12 +70,13 @@ void Bannerinici() {
 
 void RecuadEmo() {
   pushStyle();
+  textFont(getFontAt(0));
+  textSize(70);
+  textAlign(CENTER);
+  fill(getColorAt(5));
+  text("¿Cómo te sientes hoy?", margrecH-25 + (recuadreWidth/2), margrecV+37);
   noStroke();
   fill(255);
-  rect(margrecH, margrecV, recuadreWidth, recuadreHeight, 30, 30, 30, 30);
+  rect(margrecH-25, margrecV+100, recuadreWidth, recuadreHeight - 100, 30, 30, 30, 30);
   popStyle();
-}
-
-void Emo() {
-  
 }
