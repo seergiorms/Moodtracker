@@ -18,7 +18,7 @@ void initButtons() {
   buttons [3] = new Button("Personas", 32, 60 + (2*buttonH), buttonW, buttonH);
   buttons [4] = new Button("Estadísticas", 64, 60 + (3*buttonH), buttonW+36, buttonH);
   buttons [5] = new Button("Perfil", 0, 60 + (4*buttonH), buttonW, buttonH);
-  buttons [6] = new Button("Ajustes",16, 60 + (4*buttonH), buttonW, buttonH);
+  buttons [6] = new Button("Ajustes",16, 60 + (5*buttonH), buttonW, buttonH);
   
 
 

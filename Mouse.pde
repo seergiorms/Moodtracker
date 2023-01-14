@@ -33,39 +33,5 @@ void updateCursor() {
   } else {
     cursor(ARROW);
   } 
-   if((inicio.mouseOverButton() && inicio.enabled)){
-    cursor(HAND);
-  } else {
-    cursor(ARROW);
-  }
-    
-  if(resumen.mouseOverButton()  && resumen.enabled){
-    cursor(HAND);
-  } else { 
-    cursor(ARROW);
-  }
-    
-     if(personas.mouseOverButton()  && personas.enabled){
-    cursor(HAND);
-  } else { 
-    cursor(ARROW);
-  }
-    
-      if(estadisticas.mouseOverButton()  && estadisticas.enabled){
-    cursor(HAND);
-  } else { 
-    cursor(ARROW);
-  }
-    
-      if(perfil.mouseOverButton()  && perfil.enabled){
-    cursor(HAND);
-  } else { 
-    cursor(ARROW);
-  }
-    
-      if(ajustes.mouseOverButton()  && ajustes.enabled){
-    cursor(HAND);
-  } else { 
-    cursor(ARROW);
-  }
+
 }
