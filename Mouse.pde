@@ -1,7 +1,7 @@
 // En cas de pitjar el ratolí
 void mousePressed() {
 
-  if (b1.mouseOverButton() && b1.enabled) {
+  if (b1.mouseOverButton() && b1.enabled && comprovaLogin() == true) {
     pantalla = PANTALLA.INICIO;
   } else if (inicio.mouseOverButton() && inicio.enabled){
     pantalla = PANTALLA.INICIO;
@@ -12,6 +12,8 @@ void mousePressed() {
   } else if (perfil.mouseOverButton() && perfil.enabled){
     pantalla = PANTALLA.PERFIL;
   } else if (ajustes.mouseOverButton() && ajustes.enabled){
+    pantalla = PANTALLA.AJUSTES;
+  }
 
   userText.isPressed();
   passText.isPressed();
@@ -29,6 +31,41 @@ void updateCursor() {
   if ((b1.mouseOverButton() && b1.enabled)) {
     cursor(HAND);
   } else {
+    cursor(ARROW);
+  } 
+   if((inicio.mouseOverButton() && inicio.enabled)){
+    cursor(HAND);
+  } else {
+    cursor(ARROW);
+  }
+    
+  if(resumen.mouseOverButton()  && resumen.enabled){
+    cursor(HAND);
+  } else { 
+    cursor(ARROW);
+  }
+    
+     if(personas.mouseOverButton()  && personas.enabled){
+    cursor(HAND);
+  } else { 
+    cursor(ARROW);
+  }
+    
+      if(estadisticas.mouseOverButton()  && estadisticas.enabled){
+    cursor(HAND);
+  } else { 
+    cursor(ARROW);
+  }
+    
+      if(perfil.mouseOverButton()  && perfil.enabled){
+    cursor(HAND);
+  } else { 
+    cursor(ARROW);
+  }
+    
+      if(ajustes.mouseOverButton()  && ajustes.enabled){
+    cursor(HAND);
+  } else { 
     cursor(ARROW);
   }
 }

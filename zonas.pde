@@ -6,11 +6,11 @@ void Recuadreinici() {
   rect(margrecH, margrecV, recuadreWidth, recuadreHeight, 30, 30, 30, 30);
   textFont(getFontAt(0));
   textSize(60);
-  fill(getColorAt(4));
+  fill(getColorAt(6));
   text("Inicio de sesión", margrecH + 70, margrecV + 110);
   textFont(getFontAt(1));
   textSize(25);
-  fill(getColorAt(2));
+  fill(getColorAt(4));
   text("USUARIO:", margusuarioH, margusuarioV+37);
   text("CONTRASEÑA:", margusuarioH, margusuarioV+107);
    popStyle();
@@ -79,4 +79,8 @@ void RecuadEmo() {
   fill(255);
   rect(margrecH-25, margrecV+100, recuadreWidth, recuadreHeight - 100, 30, 30, 30, 30);
   popStyle();
+  textFont(getFontAt(1));
+  fill(getColorAt(6));
+  textSize(30);
+  text("Selecciona cómo te has sentido hoy:",margrecH + 25, margrecV + 170);
 }

@@ -7,7 +7,7 @@ PANTALLA pantalla = PANTALLA.CONTRASEÑA;
 
 void dibujaPantallaContraseña() {
   pushStyle();
-  displayImg(0, 0, 0, width, height);
+  displayImg(8, 0, 0, width, height);
   Recuadreinici();
   FotoPerfil();
   displayButtonsIniciales();
@@ -55,8 +55,20 @@ void dibujaPantallaEstadisticas() {
   popStyle();
 }
 
-void dibujaPantallaPerfil(){
+void dibujaPantallaPerfil() {
+  pushStyle();
+  displayImg(7, 0, 0, width, height);
+  Bannerinici();
+  displayButtonsMenu();
+  enableButtonsMenu();
+  popStyle();
 }
 
-void dibujaPantallaAjustes(){
+void dibujaPantallaAjustes() {
+  pushStyle();
+  displayImg(7, 0, 0, width, height);
+  Bannerinici();
+  displayButtonsMenu();
+  enableButtonsMenu();
+  popStyle();
 }
