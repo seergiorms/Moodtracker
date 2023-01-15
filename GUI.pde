@@ -1,4 +1,5 @@
 Button [] buttons;
+DayButton[] calendari;
 
 TextField userText, passText;
 
@@ -18,9 +19,8 @@ void initButtons() {
   buttons [3] = new Button("Personas", 32, 60 + (2*buttonH), buttonW, buttonH);
   buttons [4] = new Button("Estadísticas", 64, 60 + (3*buttonH), buttonW+36, buttonH);
   buttons [5] = new Button("Perfil", 0, 60 + (4*buttonH), buttonW, buttonH);
-  buttons [6] = new Button("Ajustes",16, 60 + (5*buttonH), buttonW, buttonH);
-  buttons [7] = new Button("Siguiente", margrecH + recuadreWidth/2 + 50, height - margrecV - 118, buttonW, buttonH);
-  
+  buttons [6] = new Button("Ajustes", 16, 60 + (5*buttonH), buttonW, buttonH);
+  buttons [7] = new Button("Siguiente", margrecH + recuadreWidth/2 + 50, height - margrecV - 105, buttonW, buttonH);
 
 
   b1 = buttons[0];
@@ -31,26 +31,14 @@ void initButtons() {
   perfil = buttons[5];
   ajustes = buttons[6];
   siguiente = buttons[7];
-
 }
 
-//RadioButton c1, c2, c3, c4, c5;
-
-// void rButtons() {
-// rbuttons = new RadioButton[5];
-// rbuttons [0] = new RadioButton (100, 100, 100);
-// rbuttons [1] = new RadioButton (200, 100, 100);
-// rbuttons [2] = new RadioButton (300, 100, 100);
-// rbuttons [3] = new RadioButton (400, 100, 100);
-// rbuttons [4] = new RadioButton (500, 100, 100);
-
-// c1 = rbuttons[0];
-// c2 = rbuttons[1];
-// c3 = rbuttons[2];
-// c4 = rbuttons[3];
-// c5 = rbuttons[4];
-//}
-
+void Calendari() {
+  c = new Calendari(50,100,700,550);
+}
+void displayCalendario(){
+  c.display();
+}
 void disableButtons() {
   for (int i = 0; i<buttons.length; i++) {
     buttons[i].setEnabled(false);
@@ -58,15 +46,21 @@ void disableButtons() {
 }
 void enableButtonsIniciales() {
   b1.setEnabled(true);
-  siguiente.setEnabled(true);
 }
 
 void displayButtonsIniciales() {
   b1.display1();
+}
+
+void displayButtonsInicio() {
   siguiente.display1();
 }
 
-void enableButtonsMenu(){
+void enableButtonsInicio() {
+  siguiente.setEnabled(true);
+}
+
+void enableButtonsMenu() {
   inicio.setEnabled(true);
   resumen.setEnabled(true);
   personas.setEnabled(true);
@@ -74,7 +68,7 @@ void enableButtonsMenu(){
   perfil.setEnabled(true);
   ajustes.setEnabled(true);
 }
-void displayButtonsMenu(){
+void displayButtonsMenu() {
   inicio.display2();
   resumen.display2();
   personas.display2();

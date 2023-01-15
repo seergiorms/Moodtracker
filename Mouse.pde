@@ -5,6 +5,8 @@ void mousePressed() {
     pantalla = PANTALLA.INICIO;
   } else if (inicio.mouseOverButton() && inicio.enabled){
     pantalla = PANTALLA.INICIO;
+  } else if (siguiente.mouseOverButton() && siguiente.enabled){
+    pantalla = PANTALLA.PINES;
   } else if (resumen.mouseOverButton() && resumen.enabled){
     pantalla = PANTALLA.RESUMEN;
   } else if (estadisticas.mouseOverButton() && estadisticas.enabled){
@@ -23,6 +25,18 @@ void mousePressed() {
 void keyPressed() {
   userText.keyPressed(key, (int)keyCode);
   passText.keyPressed(key, (int)keyCode);
+
+  // Anar un mes enrere
+  if(keyCode==LEFT){
+    c.prevMonth();
+    println("PREV MONTH");
+  }
+  // Anar un mes endavant
+  else if(keyCode==RIGHT){
+    c.nextMonth();
+    println("PREV MONTH");
+  }
+
 }
 
 void updateCursor() {

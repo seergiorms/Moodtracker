@@ -21,12 +21,16 @@ void draw() {
   background(255);
 
   switch(pantalla) {
-  case CONTRASEÑA:
+    case CONTRASEÑA:
     dibujaPantallaContraseña();
     break;
 
-  case INICIO:
+    case INICIO:
     dibujaPantallaInicio();
+    break;
+    
+    case PINES:
+    dibujaPantallaPines();
     break;
     
     case RESUMEN:

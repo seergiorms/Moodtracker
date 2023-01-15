@@ -13,7 +13,7 @@ void Recuadreinici() {
   fill(getColorAt(4));
   text("USUARIO:", margusuarioH, margusuarioV+37);
   text("CONTRASEÑA:", margusuarioH, margusuarioV+107);
-   popStyle();
+  popStyle();
 }
 
 void FotoPerfil() {
@@ -69,17 +69,34 @@ void Bannerinici() {
 
 void RecuadEmo() {
   pushStyle();
+  noStroke();
+  fill(255);
+  rect(margrecH-25, margrecV+100, recuadreWidth, recuadreHeight - 100, 30, 30, 30, 30);
+  textFont(getFontAt(1));
+  fill(getColorAt(6));
+  textSize(30);
+  text("Selecciona cómo te has sentido hoy:", margrecH + 25, margrecV + 170);
   textFont(getFontAt(0));
   textSize(70);
   textAlign(CENTER);
   fill(getColorAt(5));
   text("¿Cómo te sientes hoy?", margrecH-25 + (recuadreWidth/2), margrecV+37);
+  popStyle();
+}
+
+void RecuadEmo1() {
+  pushStyle();
   noStroke();
   fill(255);
   rect(margrecH-25, margrecV+100, recuadreWidth, recuadreHeight - 100, 30, 30, 30, 30);
-  popStyle();
   textFont(getFontAt(1));
   fill(getColorAt(6));
   textSize(30);
-  text("Selecciona cómo te has sentido hoy:",margrecH + 25, margrecV + 170);
+  text("Selecciona algunos pines:", margrecH + 25, margrecV + 170);
+  textFont(getFontAt(0));
+  textSize(70);
+  textAlign(CENTER);
+  fill(getColorAt(5));
+  text("¿Cómo te sientes hoy?", margrecH-25 + (recuadreWidth/2), margrecV+37);
+  popStyle();
 }
