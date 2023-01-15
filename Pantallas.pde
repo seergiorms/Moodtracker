@@ -62,6 +62,7 @@ void dibujaPantallaPersonas() {
   enableButtonsMenu();
   popStyle();
 }
+
 void dibujaPantallaEstadisticas() {
   pushStyle();
   displayImg(7, 0, 0, width, height);

@@ -100,3 +100,7 @@ void RecuadEmo1() {
   text("¿Cómo te sientes hoy?", margrecH-25 + (recuadreWidth/2), margrecV+37);
   popStyle();
 }
+
+void Personas(){
+  text("Selecciona algunos pines:", margrecH + 25, margrecV + 170);
+}

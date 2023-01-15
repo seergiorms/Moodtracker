@@ -8,6 +8,7 @@ Button b1, inicio, resumen, personas, estadisticas, perfil, ajustes, siguiente;
 void setGUI() {
   initButtons();
   initTexts();
+  initCalendari();
   // rButtons();
 }
 
@@ -32,9 +33,20 @@ void initButtons() {
   ajustes = buttons[6];
   siguiente = buttons[7];
 }
+//creación de componentes
+CalendariPlus c;
 
-void Calendari() {
-  c = new Calendari(50,100,700,550);
+// calendario 
+void initCalendari (){ 
+ c = new CalendariPlus(600,200,700,550);
+}
+
+void enableCalendario(){
+  c.setEnabled(true);  
+}
+
+void disableCalendario(){
+  c.setEnabled(false);   
 }
 void displayCalendario(){
   c.display();
