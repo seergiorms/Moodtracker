@@ -1,4 +1,6 @@
-
+// cuando pulsas el boton de seleccionar en la pantalla personas, en vez de enviarte a la pantalla que se supone que te tiene que llevar,
+// te lleva a la pantalla de inicio, que casualmente es la pantalla a la que te llevan el resto de botones con el mismo tipo de display, display1
+// aunque a xisco sí que le va bien el botón de siguiente de la pantalla inicio :)
 boolean logged = false;
 
 // Dimensions dels botons

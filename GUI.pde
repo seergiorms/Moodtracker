@@ -3,7 +3,7 @@ DayButton[] calendari;
 
 TextField userText, passText;
 
-Button b1, inicio, resumen, personas, estadisticas, perfil, ajustes, siguiente;
+Button b1, inicio, resumen, personas, estadisticas, perfil, ajustes, siguiente, seleccionarp;
 
 void setGUI() {
   initButtons();
@@ -13,7 +13,7 @@ void setGUI() {
 }
 
 void initButtons() {
-  buttons = new Button[8];
+  buttons = new Button[9];
   buttons [0] = new Button ("Hecho", margrecH + recuadreWidth/2+ 50, height-margrecV-126, buttonW, buttonH);
   buttons [1] = new Button("Inicio", 0, 60, buttonW, buttonH);
   buttons [2] = new Button("Resumen", 16, 60 + buttonH, buttonW, buttonH);
@@ -22,6 +22,7 @@ void initButtons() {
   buttons [5] = new Button("Perfil", 0, 60 + (4*buttonH), buttonW, buttonH);
   buttons [6] = new Button("Ajustes", 16, 60 + (5*buttonH), buttonW, buttonH);
   buttons [7] = new Button("Siguiente", margrecH + recuadreWidth/2 + 50, height - margrecV - 105, buttonW, buttonH);
+  buttons [8] = new Button("Seleccionar",  margrecH + recuadreWidth/2+ 50, height-margrecV-100, buttonW, buttonH);
 
 
   b1 = buttons[0];
@@ -32,6 +33,7 @@ void initButtons() {
   perfil = buttons[5];
   ajustes = buttons[6];
   siguiente = buttons[7];
+  seleccionarp = buttons[8];
 }
 //creación de componentes
 CalendariPlus c;
@@ -70,6 +72,14 @@ void displayButtonsInicio() {
 
 void enableButtonsInicio() {
   siguiente.setEnabled(true);
+}
+
+void displayButtonsPersonas(){
+  seleccionarp.display1();
+}
+
+void enableButtonsPersonas(){
+  seleccionarp.setEnabled(true);
 }
 
 void enableButtonsMenu() {

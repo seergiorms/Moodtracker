@@ -1,5 +1,5 @@
 enum PANTALLA {
-  CONTRASEÑA, INICIO, RESUMEN, PERSONAS, ESTADISTICAS, PERFIL, AJUSTES, PINES
+  CONTRASEÑA, INICIO, RESUMEN, PERSONAS, ESTADISTICAS, PERFIL, AJUSTES, PINES, SELECCIONARP
 };
 
 // Pantalla actual
@@ -56,10 +56,13 @@ void dibujaPantallaResumen() {
 
 void dibujaPantallaPersonas() {
   pushStyle();
-  displayImg(7, 0, 0, width, height);
+  displayImg(9, 0, 0, width, height);
   Bannerinici();
   displayButtonsMenu();
   enableButtonsMenu();
+  Personas();
+  displayButtonsPersonas();
+  enableButtonsPersonas();
   popStyle();
 }
 
@@ -87,5 +90,16 @@ void dibujaPantallaAjustes() {
   Bannerinici();
   displayButtonsMenu();
   enableButtonsMenu();
+  popStyle();
+}
+
+void dibujaPantallaSeleccionarp() {
+  pushStyle();
+  displayImg(9, 0, 0, width, height);
+  Bannerinici();
+  displayButtonsMenu();
+  enableButtonsMenu();
+  tint (255, 90, 0, 90);
+  displayImg(10, 0, 0, width, height);
   popStyle();
 }

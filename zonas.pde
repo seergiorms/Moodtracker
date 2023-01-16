@@ -101,6 +101,23 @@ void RecuadEmo1() {
   popStyle();
 }
 
-void Personas(){
-  text("Selecciona algunos pines:", margrecH + 25, margrecV + 170);
+void Personas() {
+  pushStyle();
+  textFont(getFontAt(0));
+  textSize(70);
+  fill(getColorAt(5));
+  text("Tus conocidos:", banneriWidth + 100, margrecV+37);
+  ellipse(banneriWidth + 200, margrecV + 200, 200, 200);
+  ellipse(banneriWidth + 450, margrecV + 200, 200, 200);
+  ellipse(banneriWidth + 700, margrecV + 200, 200, 200);
+  ellipse(banneriWidth + 950, margrecV + 200, 200, 200);
+  
+  ellipse(banneriWidth + 200, margrecV + 450, 200, 200);
+  ellipse(banneriWidth + 450, margrecV + 450, 200, 200);
+  ellipse(banneriWidth + 700, margrecV + 450, 200, 200);
+  ellipse(banneriWidth + 950, margrecV + 450, 200, 200);
+  
+  ellipse(banneriWidth + 200, margrecV + 700, 200, 200);
+  ellipse(banneriWidth + 450, margrecV + 700, 200, 200);
+  popStyle();
 }
