@@ -35,7 +35,6 @@ void dibujaPantallaPines() {
   pushStyle();
   displayImg(7, 0, 0, width, height);
   Bannerinici();
-  RecuadEmo1();
   displayButtonsMenu();
   enableButtonsMenu();
   displayButtonsInicio();
@@ -48,9 +47,11 @@ void dibujaPantallaResumen() {
   pushStyle();
   displayImg(7, 0, 0, width, height);
   Bannerinici();
+  recuadEmo2();
   displayButtonsMenu();
   enableButtonsMenu();
-  displayCalendario();
+  enableCalendari();
+  displayCalendari();
   popStyle();
 }
 

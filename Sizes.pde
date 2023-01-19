@@ -14,7 +14,7 @@ float midaLogo  = 200;
 float buttonW = 300;
 float buttonH = 100;
 
-float margrecH = 1000,
+int margrecH = 1000,
       margrecV = 100;
 
 // Dimensions Banner

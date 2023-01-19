@@ -1,9 +1,19 @@
 // En cas de pitjar el ratolí
 void mousePressed() {
 
-  if (b1.mouseOverButton() && b1.enabled && comprovaLogin() == true) {
-    pantalla = PANTALLA.INICIO;
-  } else if (inicio.mouseOverButton() && inicio.enabled) {
+  if (pantalla==PANTALLA.INICIO) {
+    if (siguiente.mouseOverButton() && siguiente.enabled) {
+      pantalla = PANTALLA.PINES;
+    }
+  } else if (pantalla==PANTALLA.CONTRASEÑA) {
+    userText.isPressed();
+    passText.isPressed();
+    if (b1.mouseOverButton() && b1.enabled && comprovaLogin() == true) {
+      pantalla = PANTALLA.INICIO;
+    }
+  }
+  
+  if (inicio.mouseOverButton() && inicio.enabled) {
     pantalla = PANTALLA.INICIO;
   } else if (resumen.mouseOverButton() && resumen.enabled) {
     pantalla = PANTALLA.RESUMEN;
@@ -15,14 +25,11 @@ void mousePressed() {
     pantalla = PANTALLA.AJUSTES;
   } else if (siguiente.mouseOverButton() && siguiente.enabled) {
     pantalla = PANTALLA.PINES;
-  } else if (personas.mouseOverButton() && personas.enabled){
+  } else if (personas.mouseOverButton() && personas.enabled) {
     pantalla = PANTALLA.PERSONAS;
-  } else if (seleccionarp.mouseOverButton() && seleccionarp.enabled){
+  } else if (seleccionarp.mouseOverButton() && seleccionarp.enabled) {
     pantalla = PANTALLA.SELECCIONARP;
   }
-
-  userText.isPressed();
-  passText.isPressed();
 }
 
 

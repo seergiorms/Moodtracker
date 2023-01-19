@@ -84,6 +84,14 @@ void RecuadEmo() {
   popStyle();
 }
 
+void recuadEmo2() {
+  pushStyle();
+  noStroke();
+  fill(255);
+  rect(margrecH-25, margrecV+100, recuadreWidth, recuadreHeight - 100, 30, 30, 30, 30);
+  popStyle();
+}
+
 void RecuadEmo1() {
   pushStyle();
   noStroke();
@@ -111,12 +119,12 @@ void Personas() {
   ellipse(banneriWidth + 450, margrecV + 200, 200, 200);
   ellipse(banneriWidth + 700, margrecV + 200, 200, 200);
   ellipse(banneriWidth + 950, margrecV + 200, 200, 200);
-  
+
   ellipse(banneriWidth + 200, margrecV + 450, 200, 200);
   ellipse(banneriWidth + 450, margrecV + 450, 200, 200);
   ellipse(banneriWidth + 700, margrecV + 450, 200, 200);
   ellipse(banneriWidth + 950, margrecV + 450, 200, 200);
-  
+
   ellipse(banneriWidth + 200, margrecV + 700, 200, 200);
   ellipse(banneriWidth + 450, margrecV + 700, 200, 200);
   popStyle();

@@ -36,21 +36,21 @@ void initButtons() {
   seleccionarp = buttons[8];
 }
 //creación de componentes
-CalendariPlus c;
+Calendari c;
 
 // calendario 
 void initCalendari (){ 
- c = new CalendariPlus(600,200,700,550);
+ c = new Calendari(margrecH , margrecV + 120, 700, 550);
 }
 
-void enableCalendario(){
+void enableCalendari(){
   c.setEnabled(true);  
 }
 
-void disableCalendario(){
+void disableCalendari(){
   c.setEnabled(false);   
 }
-void displayCalendario(){
+void displayCalendari(){
   c.display();
 }
 void disableButtons() {
