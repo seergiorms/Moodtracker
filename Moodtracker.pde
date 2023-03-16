@@ -1,5 +1,3 @@
-// hecho el array de los rbutton con su init y lo mismo con el rbuttongroup falta poner los condicionales (ns dnd) pero hay q poner los condicionales
-// para que funcionen los botones. Luego solo queda poner los png por encima (en la misma medida que los rbutton) y yata.
 boolean logged = false;
 
 // Dimensions dels botons
