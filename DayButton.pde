@@ -18,7 +18,6 @@ class DayButton {
   }
   
   // Setters
-  
   void setEnabled(boolean b){
     this.enabled = b;
   }

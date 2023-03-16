@@ -53,6 +53,7 @@ class Button {
     rect(this.x, this.y, this.w, this.h, 10);    // Rectangle del botó
     // Text (color, alineació i mida)
 
+
     if (!enabled) {
       fill(getColorAt(5));
       textAlign(CENTER);
@@ -77,8 +78,12 @@ class Button {
     if (!enabled) {
       fill(fillColorDisabled);  // Color desabilitat
     } else if (mouseOverButton()) {
-      fill(fillColorOver2);      // Color quan ratolí a sobre
+      pushStyle();
+      fill(fillColorOver2); // Color quan ratolí a sobre
+      cursor(HAND);
+      popStyle();
     } else {
+      cursor(ARROW);
       fill(fillColor2);          // Color actiu però ratolí fora
     }
     stroke(strokeColor2);
@@ -86,20 +91,20 @@ class Button {
     rect(this.x, this.y, this.w, this.h, 10);    // Rectangle del botó
     // Text (color, alineació i mida)
 
+    textAlign(LEFT);
+
     if (!enabled) {
       fill(getColorAt(6));
-      textAlign(CENTER);
       textSize(40);
-      text(textBoto, this.x + this.w/2, this.y + this.h/2 + 10);
+      text(textBoto, this.x, this.y + this.h/2 + 10);
     } else if (mouseOverButton()) {
       fill(getColorAt(2));
       textSize(50);
-      text(textBoto, this.x + this.w/2, this.y + this.h/2 + 10);
+      text(textBoto, this.x, this.y + this.h/2 + 10);
     } else {
       fill(getColorAt(6));
-      textAlign(CENTER);
       textSize(40);
-      text(textBoto, this.x + this.w/2, this.y + this.h/2 + 10);
+      text(textBoto, this.x, this.y + this.h/2 + 10);
     }
     popStyle();
   }

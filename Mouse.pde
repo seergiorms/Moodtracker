@@ -2,9 +2,49 @@
 void mousePressed() {
 
   if (pantalla==PANTALLA.INICIO) {
+    
     if (siguiente.mouseOverButton() && siguiente.enabled) {
       pantalla = PANTALLA.PINES;
     }
+    else if(mfeliz.onMouseOver()){
+      mfeliz.toggle();
+      feliz.setChecked(false);
+      meh.setChecked(false);
+      triste.setChecked(false);
+      mtriste.setChecked(false);
+    }
+    else if(feliz.onMouseOver()){
+      feliz.toggle();
+      mfeliz.setChecked(false);
+      meh.setChecked(false);
+      triste.setChecked(false);
+      mtriste.setChecked(false);
+    }
+    else if(meh.onMouseOver()){
+      meh.toggle();
+      mfeliz.setChecked(false);
+      feliz.setChecked(false);
+      triste.setChecked(false);
+      mtriste.setChecked(false);
+    }
+    else if(triste.onMouseOver()){
+      triste.toggle();
+      mfeliz.setChecked(false);
+      meh.setChecked(false);
+      feliz.setChecked(false);
+      mtriste.setChecked(false);
+    }
+    else if(mtriste.onMouseOver()){
+      mtriste.toggle();
+      mfeliz.setChecked(false);
+      meh.setChecked(false);
+      triste.setChecked(false);
+      feliz.setChecked(false);
+    }
+    
+    
+    
+    
   } else if (pantalla==PANTALLA.CONTRASEÑA) {
     userText.isPressed();
     passText.isPressed();
@@ -12,7 +52,7 @@ void mousePressed() {
       pantalla = PANTALLA.INICIO;
     }
   }
-  
+
   if (inicio.mouseOverButton() && inicio.enabled) {
     pantalla = PANTALLA.INICIO;
   } else if (resumen.mouseOverButton() && resumen.enabled) {
@@ -27,8 +67,6 @@ void mousePressed() {
     pantalla = PANTALLA.PINES;
   } else if (personas.mouseOverButton() && personas.enabled) {
     pantalla = PANTALLA.PERSONAS;
-  } else if (seleccionarp.mouseOverButton() && seleccionarp.enabled) {
-    pantalla = PANTALLA.SELECCIONARP;
   }
 }
 
@@ -49,12 +87,5 @@ void keyPressed() {
   }
 }
 
-void updateCursor() {
-
-  // Si està sobre algun botó (b1, b2 o b3) i està abilitat
-  if ((b1.mouseOverButton() && b1.enabled)) {
-    cursor(HAND);
-  } else {
-    cursor(ARROW);
-  }
+void updateCursor(){
 }

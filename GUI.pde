@@ -1,28 +1,38 @@
+//creación de componentes
+Calendari c;
 Button [] buttons;
+RadioButton[] rbuttons;
 DayButton[] calendari;
+String[] textos = {"WATER", "AIR", "FIRE", "EARTH"};
+float[] values = {400, 600, 100, 300};
+color[] colorsd = {color(0, 0, 255), color(50, 50, 200), color(255, 0, 0), color(0, 255, 0)};
+RadioButtonGroup emociones;
 
 TextField userText, passText;
 
 Button b1, inicio, resumen, personas, estadisticas, perfil, ajustes, siguiente, seleccionarp;
+RadioButton mfeliz, feliz, meh, triste, mtriste;
 
 void setGUI() {
   initButtons();
   initTexts();
   initCalendari();
+  initRbuttons();
+  initRadioButtonGroup() ;
   // rButtons();
 }
 
 void initButtons() {
   buttons = new Button[9];
   buttons [0] = new Button ("Hecho", margrecH + recuadreWidth/2+ 50, height-margrecV-126, buttonW, buttonH);
-  buttons [1] = new Button("Inicio", 0, 60, buttonW, buttonH);
-  buttons [2] = new Button("Resumen", 16, 60 + buttonH, buttonW, buttonH);
-  buttons [3] = new Button("Personas", 32, 60 + (2*buttonH), buttonW, buttonH);
-  buttons [4] = new Button("Estadísticas", 64, 60 + (3*buttonH), buttonW+36, buttonH);
-  buttons [5] = new Button("Perfil", 0, 60 + (4*buttonH), buttonW, buttonH);
-  buttons [6] = new Button("Ajustes", 16, 60 + (5*buttonH), buttonW, buttonH);
+  buttons [1] = new Button("Inicio", 50, 60, buttonW, buttonH);
+  buttons [2] = new Button("Resumen", 50, 60 + buttonH, buttonW, buttonH);
+  buttons [3] = new Button("Personas", 50, 60 + (2*buttonH), buttonW, buttonH);
+  buttons [4] = new Button("Estadísticas", 50, 60 + (3*buttonH), buttonW+36, buttonH);
+  buttons [5] = new Button("Perfil", 50, 60 + (4*buttonH), buttonW, buttonH);
+  buttons [6] = new Button("Ajustes", 50, 60 + (5*buttonH), buttonW, buttonH);
   buttons [7] = new Button("Siguiente", margrecH + recuadreWidth/2 + 50, height - margrecV - 105, buttonW, buttonH);
-  buttons [8] = new Button("Seleccionar",  margrecH + recuadreWidth/2+ 50, height-margrecV-100, buttonW, buttonH);
+  buttons [8] = new Button("Seleccionar", margrecH + recuadreWidth/2+ 50, height-margrecV-100, buttonW, buttonH);
 
 
   b1 = buttons[0];
@@ -35,22 +45,50 @@ void initButtons() {
   siguiente = buttons[7];
   seleccionarp = buttons[8];
 }
-//creación de componentes
-Calendari c;
 
-// calendario 
-void initCalendari (){ 
- c = new Calendari(margrecH , margrecV + 120, 700, 550);
+//construcción de los radiobuttons
+void initRbuttons() {
+  rbuttons = new RadioButton[5];
+  rbuttons[0] = new RadioButton(margrecH - 50 + (recuadreWidth/5), margrecV+280, 50);
+  rbuttons[1] = new RadioButton(margrecH - 50 + (recuadreWidth/5)+135, margrecV+280, 50);
+  rbuttons[2] = new RadioButton(margrecH - 50 + (recuadreWidth/5)+265, margrecV+280, 50);
+  rbuttons[3] = new RadioButton(margrecH - 50 + (recuadreWidth/5)+395, margrecV+280, 50);
+  rbuttons[4] = new RadioButton(margrecH - 50 + (recuadreWidth/5)+525, margrecV+280, 50);
+
+  mfeliz = rbuttons[0];
+  mfeliz.setCheckedColor(getColorAt(0));
+  feliz = rbuttons[1];
+  feliz.setCheckedColor(getColorAt(1));
+  meh = rbuttons[2];
+  meh.setCheckedColor(getColorAt(2));
+  triste = rbuttons[3];
+  triste.setCheckedColor(getColorAt(3));
+  mtriste = rbuttons[4];
+  mtriste.setCheckedColor(getColorAt(4));
+}
+//creación del radiobuttongroup
+void initRadioButtonGroup() {
+  emociones = new RadioButtonGroup(5);
+  emociones.setRadioButtons(mfeliz, feliz, meh, triste, mtriste);
 }
 
-void enableCalendari(){
-  c.setEnabled(true);  
+void displayEmociones() {
+  emociones.display();
 }
 
-void disableCalendari(){
-  c.setEnabled(false);   
+// calendario
+void initCalendari () {
+  c = new Calendari(margrecH, margrecV + 120, 700, 550);
 }
-void displayCalendari(){
+
+void enableCalendari() {
+  c.setEnabled(true);
+}
+
+void disableCalendari() {
+  c.setEnabled(false);
+}
+void displayCalendari() {
   c.display();
 }
 void disableButtons() {
@@ -74,11 +112,11 @@ void enableButtonsInicio() {
   siguiente.setEnabled(true);
 }
 
-void displayButtonsPersonas(){
+void displayButtonsPersonas() {
   seleccionarp.display1();
 }
 
-void enableButtonsPersonas(){
+void enableButtonsPersonas() {
   seleccionarp.setEnabled(true);
 }
 

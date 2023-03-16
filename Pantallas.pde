@@ -1,9 +1,9 @@
 enum PANTALLA {
-  CONTRASEÑA, INICIO, RESUMEN, PERSONAS, ESTADISTICAS, PERFIL, AJUSTES, PINES, SELECCIONARP
+  CONTRASEÑA, INICIO, RESUMEN, PERSONAS, ESTADISTICAS, PERFIL, AJUSTES, PINES,
 };
 
 // Pantalla actual
-PANTALLA pantalla = PANTALLA.CONTRASEÑA;
+PANTALLA pantalla = PANTALLA.INICIO;
 
 void dibujaPantallaContraseña() {
   pushStyle();
@@ -28,6 +28,13 @@ void dibujaPantallaInicio() {
   enableButtonsMenu();
   displayButtonsInicio();
   enableButtonsInicio();
+  displayEmociones();
+  imageMode(CENTER);
+  displayImg(4, margrecH - 50 + (recuadreWidth/5), margrecV+280, 100,100);
+  displayImg(5, margrecH - 50 + (recuadreWidth/5)+135, margrecV+280, 100, 100);
+  displayImg(1, margrecH - 50 + (recuadreWidth/5)+265, margrecV+280, 100, 100);
+  displayImg(3, margrecH - 50 + (recuadreWidth/5)+395, margrecV+280, 100, 100);
+  displayImg(2, margrecH - 50 + (recuadreWidth/5)+525, margrecV+280, 100, 100);
   popStyle();
 }
 
@@ -57,7 +64,7 @@ void dibujaPantallaResumen() {
 
 void dibujaPantallaPersonas() {
   pushStyle();
-  displayImg(9, 0, 0, width, height);
+  background(getColorAt(0));
   Bannerinici();
   displayButtonsMenu();
   enableButtonsMenu();
@@ -69,7 +76,7 @@ void dibujaPantallaPersonas() {
 
 void dibujaPantallaEstadisticas() {
   pushStyle();
-  displayImg(7, 0, 0, width, height);
+  background(getColorAt(4));
   Bannerinici();
   displayButtonsMenu();
   enableButtonsMenu();
@@ -91,16 +98,5 @@ void dibujaPantallaAjustes() {
   Bannerinici();
   displayButtonsMenu();
   enableButtonsMenu();
-  popStyle();
-}
-
-void dibujaPantallaSeleccionarp() {
-  pushStyle();
-  displayImg(9, 0, 0, width, height);
-  Bannerinici();
-  displayButtonsMenu();
-  enableButtonsMenu();
-  tint (255, 90, 0, 90);
-  displayImg(10, 0, 0, width, height);
   popStyle();
 }
