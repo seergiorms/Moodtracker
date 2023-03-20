@@ -1,5 +1,5 @@
 enum PANTALLA {
-  CONTRASEÑA, INICIO, RESUMEN, PERSONAS, ESTADISTICAS, PERFIL, AJUSTES, PINES,
+  CONTRASEÑA, INICIO, RESUMEN, PERSONAS, ESTADISTICAS, PERFIL, AJUSTES, PINES, PERSP
 };
 
 // Pantalla actual
@@ -30,7 +30,7 @@ void dibujaPantallaInicio() {
   enableButtonsInicio();
   displayEmociones();
   imageMode(CENTER);
-  displayImg(4, margrecH - 50 + (recuadreWidth/5), margrecV+280, 100,100);
+  displayImg(4, margrecH - 50 + (recuadreWidth/5), margrecV+280, 100, 100);
   displayImg(5, margrecH - 50 + (recuadreWidth/5)+135, margrecV+280, 100, 100);
   displayImg(1, margrecH - 50 + (recuadreWidth/5)+265, margrecV+280, 100, 100);
   displayImg(3, margrecH - 50 + (recuadreWidth/5)+395, margrecV+280, 100, 100);
@@ -42,11 +42,12 @@ void dibujaPantallaPines() {
   pushStyle();
   displayImg(7, 0, 0, width, height);
   Bannerinici();
+  RecuadEmo1();
   displayButtonsMenu();
   enableButtonsMenu();
-  displayButtonsInicio();
-  enableButtonsInicio();
-  RecuadEmo1();
+  displayButtonsPines();
+  enableButtonsPines();
+  
   popStyle();
 }
 
@@ -99,4 +100,7 @@ void dibujaPantallaAjustes() {
   displayButtonsMenu();
   enableButtonsMenu();
   popStyle();
+}
+
+void dibujaPantallaPersp(){
 }

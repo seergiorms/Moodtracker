@@ -10,7 +10,7 @@ RadioButtonGroup emociones;
 
 TextField userText, passText;
 
-Button b1, inicio, resumen, personas, estadisticas, perfil, ajustes, siguiente, seleccionarp;
+Button b1, inicio, resumen, personas, estadisticas, perfil, ajustes, siguiente, seleccionarp, atras;
 RadioButton mfeliz, feliz, meh, triste, mtriste;
 
 void setGUI() {
@@ -23,7 +23,7 @@ void setGUI() {
 }
 
 void initButtons() {
-  buttons = new Button[9];
+  buttons = new Button[10];
   buttons [0] = new Button ("Hecho", margrecH + recuadreWidth/2+ 50, height-margrecV-126, buttonW, buttonH);
   buttons [1] = new Button("Inicio", 50, 60, buttonW, buttonH);
   buttons [2] = new Button("Resumen", 50, 60 + buttonH, buttonW, buttonH);
@@ -33,6 +33,7 @@ void initButtons() {
   buttons [6] = new Button("Ajustes", 50, 60 + (5*buttonH), buttonW, buttonH);
   buttons [7] = new Button("Siguiente", margrecH + recuadreWidth/2 + 50, height - margrecV - 105, buttonW, buttonH);
   buttons [8] = new Button("Seleccionar", margrecH + recuadreWidth/2+ 50, height-margrecV-100, buttonW, buttonH);
+  buttons [9] = new Button("Atrás", margrecH, height - margrecV-105, buttonW, buttonH);
 
 
   b1 = buttons[0];
@@ -44,6 +45,7 @@ void initButtons() {
   ajustes = buttons[6];
   siguiente = buttons[7];
   seleccionarp = buttons[8];
+  atras = buttons[9];
 }
 
 //construcción de los radiobuttons
@@ -110,6 +112,17 @@ void displayButtonsInicio() {
 
 void enableButtonsInicio() {
   siguiente.setEnabled(true);
+
+}
+
+void displayButtonsPines() {
+  siguiente.display1();
+  atras.display1();
+}
+
+void enableButtonsPines() {
+  siguiente.setEnabled(true);
+  atras.setEnabled(true);
 }
 
 void displayButtonsPersonas() {
