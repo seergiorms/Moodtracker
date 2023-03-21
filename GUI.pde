@@ -11,7 +11,7 @@ RadioButtonGroup emociones;
 TextField userText, passText;
 
 Button b1, inicio, resumen, personas, estadisticas, perfil, ajustes, siguiente, seleccionarp, atras;
-RadioButton mfeliz, feliz, meh, triste, mtriste;
+RadioButton mfeliz, feliz, meh, triste, mtriste, aeroplane,  diving-mask, luggage, sun, swim-suit, umbrella, volleyball, beer-tin, sun-glasses, tv;
 
 void setGUI() {
   initButtons();
@@ -50,12 +50,22 @@ void initButtons() {
 
 //construcción de los radiobuttons
 void initRbuttons() {
-  rbuttons = new RadioButton[5];
+  rbuttons = new RadioButton[15];
   rbuttons[0] = new RadioButton(margrecH - 50 + (recuadreWidth/5), margrecV+280, 50);
   rbuttons[1] = new RadioButton(margrecH - 50 + (recuadreWidth/5)+135, margrecV+280, 50);
   rbuttons[2] = new RadioButton(margrecH - 50 + (recuadreWidth/5)+265, margrecV+280, 50);
   rbuttons[3] = new RadioButton(margrecH - 50 + (recuadreWidth/5)+395, margrecV+280, 50);
   rbuttons[4] = new RadioButton(margrecH - 50 + (recuadreWidth/5)+525, margrecV+280, 50);
+  rbuttons[5] = new RadioButton(margrecH - 50 + (recuadreWidth/5), margrecV+280, 50);
+  rbuttons[6] = new RadioButton(margrecH - 50 + (recuadreWidth/5)+135, margrecV+280, 50);
+  rbuttons[7] = new RadioButton(margrecH - 50 + (recuadreWidth/5)+265, margrecV+280, 50);
+  rbuttons[8] = new RadioButton(margrecH - 50 + (recuadreWidth/5)+395, margrecV+280, 50);
+  rbuttons[9] = new RadioButton(margrecH - 50 + (recuadreWidth/5)+525, margrecV+280, 50);
+  rbuttons[10] = new RadioButton(margrecH - 50 + (recuadreWidth/5), margrecV+280 + 135, 50);
+  rbuttons[11] = new RadioButton(margrecH - 50 + (recuadreWidth/5)+135, margrecV+280 + 265, 50);
+  rbuttons[12] = new RadioButton(margrecH - 50 + (recuadreWidth/5)+265, margrecV+280 + 395, 50);
+  rbuttons[13] = new RadioButton(margrecH - 50 + (recuadreWidth/5)+395, margrecV+280 + 525, 50);
+  rbuttons[14] = new RadioButton(margrecH - 50 + (recuadreWidth/5)+525, margrecV+280 + 655, 50);
 
   mfeliz = rbuttons[0];
   mfeliz.setCheckedColor(getColorAt(0));
@@ -67,6 +77,26 @@ void initRbuttons() {
   triste.setCheckedColor(getColorAt(3));
   mtriste = rbuttons[4];
   mtriste.setCheckedColor(getColorAt(4));
+  aeroplane = rbuttons[5];
+  aeroplane.setCheckedColor(getColorAt(1));
+  diving-mask = rbuttons[6];
+  diving-mask.setCheckedColor(getColorAt(1));
+  luggage = rbuttons[7];
+  luggage.setCheckedColor(getColorAt(1));
+  sun = rbuttons[8];
+  sun.setCheckedColor(getColorAt(1));
+  swim-suit = rbuttons[9];
+  swim-suit.setCheckedColor(getColorAt(1));
+  umbrella = rbuttons[10];
+  umbrella.setCheckedColor(getColorAt(1));
+  volleyball = rbuttons[11];
+  volleyball.setCheckedColor(getColorAt(1));
+  beer-tin = rbuttons[12];
+  beer-tin.setCheckedColor(getColorAt(1));
+  sun-glasses = rbuttons[13];
+  sun-glasses.setCheckedColor(getColorAt(1));
+  tv = rbuttons[14];
+  tv.setCheckedColor(getColorAt(1));
 }
 //creación del radiobuttongroup
 void initRadioButtonGroup() {
@@ -112,7 +142,6 @@ void displayButtonsInicio() {
 
 void enableButtonsInicio() {
   siguiente.setEnabled(true);
-
 }
 
 void displayButtonsPines() {

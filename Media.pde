@@ -5,7 +5,7 @@ PImage[] pic;
 
 // Estableix les imatges de l'App
 void setMedias() {
-  this.pic = new PImage[9];
+  this.pic = new PImage[19];
   this.pic[0] = loadImage("/fondo1.jpg");
   this.pic[1] = loadImage("meh.png");
   this.pic[2] = loadImage("dead.png");
@@ -15,6 +15,16 @@ void setMedias() {
   this.pic[6] = loadImage("profile.png");
   this.pic[7] = loadImage("gradient.png");
   this.pic[8] = loadImage("water.jpg");
+  this.pic[9] = loadImage("aeroplane.png");
+  this.pic[10] =loadImage("diving-mask.png");
+  this.pic[11] = loadImage("luggage.png");
+  this.pic[12] = loadImage("sun.png");
+  this.pic[13] = loadImage("swim-suit.png");
+  this.pic[14] = loadImage("umbrella.png");
+  this.pic[15] = loadImage("volleyball.png");
+  this.pic[16] = loadImage("beer-tin.png");
+  this.pic[17] = loadImage("sun-glasses.png");
+  this.pic[18] = loadImage("tv.png");
 }
 
 // Getter del número d'imatges
