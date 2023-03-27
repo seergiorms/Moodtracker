@@ -45,9 +45,19 @@ void dibujaPantallaPines() {
   RecuadEmo1();
   displayButtonsMenu();
   enableButtonsMenu();
+  initButtonsPines();
   displayButtonsPines();
-  enableButtonsPines();
-  
+  imageMode(CENTER);
+  displayImg(9, margrecH - 50 + (recuadreWidth/5), margrecV+280, 70, 70);
+  displayImg(10, margrecH - 50 + (recuadreWidth/5)+135, margrecV+280, 70, 70);
+  displayImg(11, margrecH - 50 + (recuadreWidth/5)+265, margrecV+280, 70, 70);
+  displayImg(10, margrecH - 50 + (recuadreWidth/5)+395, margrecV+280, 70, 70);
+  displayImg(13, margrecH - 50 + (recuadreWidth/5)+525, margrecV+280, 70, 70);
+  displayImg(14, margrecH - 50 + (recuadreWidth/5), margrecV+280+135, 70, 70);
+  displayImg(15, margrecH - 50 + (recuadreWidth/5)+135, margrecV+280+135, 70, 70);
+  displayImg(16, margrecH - 50 + (recuadreWidth/5)+260, margrecV+280+135, 70, 70);
+  displayImg(17, margrecH - 50 + (recuadreWidth/5)+395, margrecV+280+135, 70, 70);
+  displayImg(18, margrecH - 50 + (recuadreWidth/5)+525, margrecV+280+130, 65, 65);
   popStyle();
 }
 
@@ -102,5 +112,5 @@ void dibujaPantallaAjustes() {
   popStyle();
 }
 
-void dibujaPantallaPersp(){
+void dibujaPantallaPersp() {
 }

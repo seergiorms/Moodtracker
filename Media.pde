@@ -16,14 +16,14 @@ void setMedias() {
   this.pic[7] = loadImage("gradient.png");
   this.pic[8] = loadImage("water.jpg");
   this.pic[9] = loadImage("aeroplane.png");
-  this.pic[10] =loadImage("diving-mask.png");
+  this.pic[10] =loadImage("divingmask.png");
   this.pic[11] = loadImage("luggage.png");
   this.pic[12] = loadImage("sun.png");
-  this.pic[13] = loadImage("swim-suit.png");
+  this.pic[13] = loadImage("swimsuit.png");
   this.pic[14] = loadImage("umbrella.png");
   this.pic[15] = loadImage("volleyball.png");
-  this.pic[16] = loadImage("beer-tin.png");
-  this.pic[17] = loadImage("sun-glasses.png");
+  this.pic[16] = loadImage("beertin.png");
+  this.pic[17] = loadImage("sunglasses.png");
   this.pic[18] = loadImage("tv.png");
 }
 

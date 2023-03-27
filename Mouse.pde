@@ -48,6 +48,26 @@ void mousePressed() {
     } else if
       (atras.mouseOverButton() && atras.enabled) {
       pantalla = PANTALLA.INICIO;
+    } else if (aeroplane.onMouseOver()) {
+      aeroplane.toggle();
+    } else if (divingmask.onMouseOver()) {
+      divingmask.toggle();
+    } else if (luggage.onMouseOver()) {
+      luggage.toggle();
+    } else if (sun.onMouseOver()) {
+      sun.toggle();
+    } else if (swimsuit.onMouseOver()) {
+      swimsuit.toggle();
+    } else if (umbrella.onMouseOver()){
+      umbrella.toggle();
+    } else if (volleyball.onMouseOver()) {
+      volleyball.toggle();
+    } else if (beertin.onMouseOver()) {
+      beertin.toggle();
+    } else if (sunglasses.onMouseOver()) {
+      sunglasses.toggle();
+    } else if (tv.onMouseOver()){
+      tv.toggle();
     }
   }
 

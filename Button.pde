@@ -44,9 +44,11 @@ class Button {
     if (!enabled) {
       fill(fillColorDisabled);  // Color desabilitat
     } else if (mouseOverButton()) {
-      fill(fillColorOver1);      // Color quan ratolí a sobre
+      cursor(HAND);
+      fill(fillColorOver1);   // Color quan ratolí a sobre
     } else {
-      fill(fillColor1);          // Color actiu però ratolí fora
+      cursor(ARROW);
+      fill(fillColor1);   // Color actiu però ratolí fora
     }
     stroke(strokeColor1);
     strokeWeight(2);        //Color i gruixa del contorn
@@ -60,11 +62,13 @@ class Button {
       textSize(30);
       text(textBoto, this.x + this.w/2, this.y + this.h/2 + 10);
     } else if (mouseOverButton()) {
+      cursor(HAND);
       fill(getColorAt(4));
       textAlign(CENTER);
       textSize(30);
       text(textBoto, this.x + this.w/2, this.y + this.h/2 + 10);
     } else {
+      cursor(ARROW);
       fill(getColorAt(5));
       textAlign(CENTER);
       textSize(30);
