@@ -43,6 +43,7 @@ class RadioButton {
     popStyle();
   }
   
+  
   void setChecked(boolean b){
     this.checked = b;
   }

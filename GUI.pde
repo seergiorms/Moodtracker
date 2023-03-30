@@ -180,29 +180,6 @@ void displayButtonsMenu() {
   ajustes.display2();
 }
 
-//disable, enable, display etc RadioButton
-
-//void disableRadio() {
-//  for (int i = 0; i<rbuttons.length; i++) {
-//    rbuttons[i].setEnabled(false);
-//  }
-//}
-//void enableButtonsIniciales() {
-//  c1.setEnabled(true);
-//  c2.setEnabled(true);
-//  c3.setEnabled(true);
-// c4.setEnabled(true);
-//  c5.setEnabled(true);
-//}
-
-//void displayButtonsIniciales() {
-// c1.display();
-// c2.display();
-// c3.display();
-// c4.display();
-// c5.display();
-//}
-
 void displayTextField1() {
   userText.displaytext();
 }

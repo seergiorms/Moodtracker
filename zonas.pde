@@ -89,6 +89,16 @@ void recuadEmo2() {
   noStroke();
   fill(255);
   rect(margrecH-25, margrecV+100, recuadreWidth, recuadreHeight - 100, 30, 30, 30, 30);
+  textFont(getFontAt(1));
+  fill(getColorAt(6));
+  textSize(30);
+  text("Selecciona las personas con las", margrecH + 25, margrecV + 170);
+  text("que has interactuado hoy:", margrecH + 25, margrecV + 200);
+  textFont(getFontAt(0));
+  textSize(70);
+  textAlign(CENTER);
+  fill(getColorAt(5));
+  text("¿Cómo te sientes hoy?", margrecH-25 + (recuadreWidth/2), margrecV+37);
   popStyle();
 }
 

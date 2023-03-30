@@ -20,41 +20,47 @@ void draw() {
   background(255);
 
   switch(pantalla) {
-    case CONTRASEÑA:
+  case CONTRASEÑA:
     dibujaPantallaContraseña();
     break;
 
-    case INICIO:
+  case INICIO:
     dibujaPantallaInicio();
     break;
-    
-    case PINES:
+
+  case PINES:
     dibujaPantallaPines();
     break;
-    
-    case RESUMEN:
+
+  case RESUMEN:
     dibujaPantallaResumen();
     break;
-    
-    case PERSONAS: 
+
+  case PERSONAS:
     dibujaPantallaPersonas();
     break;
-    
-    case ESTADISTICAS:
+
+  case ESTADISTICAS:
     dibujaPantallaEstadisticas();
     break;
-    
-    case PERFIL:
+
+  case PERFIL:
     dibujaPantallaPerfil();
     break;
-    
-    case AJUSTES:
+
+  case AJUSTES:
     dibujaPantallaAjustes();
     break;
-    
- 
+
+  case PERSP:
+    dibujaPantallaPersp();
+    break;
+
+  case FINAL:
+    dibujaPantallaFinal();
+    break;
   }
-  
+
 
   updateCursor();
 }
