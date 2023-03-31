@@ -118,3 +118,20 @@ void RecuadEmo1() {
   text("¿Cómo te sientes hoy?", margrecH-25 + (recuadreWidth/2), margrecV+37);
   popStyle();
 }
+
+void recuadFinal() {
+  pushStyle();
+  noStroke();
+  fill(255);
+  rect(margrecH-25, margrecV+100, recuadreWidth, recuadreHeight - 100, 30, 30, 30, 30);
+  textFont(getFontAt(0));
+  textSize(70);
+  textAlign(CENTER);
+  fill(getColorAt(5));
+  text("Se ha registrado tu dia", margrecH-25 + (recuadreWidth/2), margrecV+37);
+  textFont(getFontAt(1));
+  textSize(100);
+  fill(getColorAt(6));
+  text("Hecho!", margrecH + (recuadreWidth/2), margrecV + (recuadreHeight/2));
+  popStyle();
+}

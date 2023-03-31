@@ -9,7 +9,7 @@ RadioButtonGroup emociones, pines, persp;
 
 TextField userText, passText;
 
-Button b1, inicio, resumen, personas, estadisticas, perfil, ajustes, siguiente, seleccionarp, atras, siguiente1, atras1;
+Button b1, inicio, resumen, personas, estadisticas, perfil, ajustes, siguiente, seleccionarp, atras, siguiente1, atras1, atras2, hecho, volver;
 RadioButton mfeliz, feliz, meh, triste, mtriste, aeroplane, divingmask, luggage, sun, swimsuit, umbrella, volleyball, beertin, sunglasses, tv, sandra, manu, perro;
 
 void setGUI() {
@@ -22,7 +22,7 @@ void setGUI() {
 }
 
 void initButtons() {
-  buttons = new Button[12];
+  buttons = new Button[15];
   buttons [0] = new Button ("Hecho", margrecH + recuadreWidth/2+ 50, height-margrecV-126, buttonW, buttonH);
   buttons [1] = new Button("Inicio", 50, 60, buttonW, buttonH);
   buttons [2] = new Button("Resumen", 50, 60 + buttonH, buttonW, buttonH);
@@ -35,11 +35,14 @@ void initButtons() {
   buttons [9] = new Button("Atrás", margrecH, height - margrecV-105, buttonW, buttonH);
   buttons [10] = new Button("Siguiente", margrecH + recuadreWidth/2 + 50, height - margrecV - 105, buttonW, buttonH);
   buttons [11] = new Button("Atrás", margrecH, height - margrecV-105, buttonW, buttonH);
+  buttons [12] = new Button("Atrás", margrecH, height - margrecV-105, buttonW, buttonH);
+  buttons [13] = new Button("Hecho", margrecH + recuadreWidth/2+ 50, height-margrecV-100, buttonW, buttonH);
+  buttons[14] = new Button("Volver",margrecH + recuadreWidth/2+ 50, height-margrecV-100,buttonW, buttonH);
 
 
 
 
-  b1 = buttons[0];
+    b1 = buttons[0];
   inicio = buttons[1];
   resumen = buttons[2];
   personas = buttons[3];
@@ -50,8 +53,13 @@ void initButtons() {
   seleccionarp = buttons[8];
   atras = buttons[9];
   siguiente1 = buttons[10];
+  siguiente1.enabled = true;
   siguiente.enabled=false;
   atras1 = buttons[11];
+  atras1.enabled = true;
+  atras2 = buttons[12];
+  hecho = buttons[13];
+  volver = buttons[14];
 }
 
 //construcción de los radiobuttons
@@ -178,18 +186,22 @@ void enableButtonsInicio1() {
   siguiente1.setEnabled(true);
 }
 
+void displayButtonsFinal(){
+  volver.display1();
+}
+
 
 
 
 void initButtonsPines() {
-  siguiente1.display1();
-  atras.display1();
   pines = new RadioButtonGroup(10);
   pines.setRadioButtons(aeroplane, divingmask, luggage, sun, swimsuit, umbrella, volleyball, beertin, sunglasses, tv);
 }
 
 void displayButtonsPines() {
   pines.display();
+  siguiente1.display1();
+  atras.display1();
 }
 
 
@@ -200,6 +212,8 @@ void initButtonsPersp() {
 
 void displayButtonsPersp() {
   persp.display1();
+  atras2.display1();
+  hecho.display1();
 }
 
 void displayButtonsPersonas() {

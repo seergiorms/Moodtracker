@@ -23,6 +23,8 @@ void mousePressed() {
     eventosPantallaPines();
   } else if (pantalla == PANTALLA.PERSP) {
     eventosPantallaPersp();
+  } else if (pantalla == PANTALLA.FINAL){
+    eventosPantallaFinal();
   }
 }
 
@@ -77,9 +79,9 @@ void eventosPantallaPines() {
 }
 
 void eventosPantallaPersp() {
-  if (siguiente.mouseOverButton() && siguiente.enabled) {
+  if (hecho.mouseOverButton() && hecho.enabled) {
     pantalla = PANTALLA.FINAL;
-  } else if (atras.mouseOverButton() && atras.enabled) {
+  } else if (atras2.mouseOverButton() && atras2.enabled) {
     pantalla = PANTALLA.PINES;
   } else if (sandra.onMouseOver()) {
     sandra.toggle();
@@ -90,6 +92,11 @@ void eventosPantallaPersp() {
   }
 }
 
+void eventosPantallaFinal(){
+  if (volver.mouseOverButton() && volver.enabled){
+    pantalla = PANTALLA.INICIO;
+  }
+}
 
 
 

@@ -127,4 +127,11 @@ void dibujaPantallaPersp() {
 }
 
 void dibujaPantallaFinal() {
+  pushStyle();
+  displayImg(7, 0, 0, width, height);
+  Bannerinici();
+  recuadFinal();
+  displayButtonsMenu();
+  enableButtonsMenu();
+  displayButtonsFinal();
 }
