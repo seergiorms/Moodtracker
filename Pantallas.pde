@@ -26,9 +26,8 @@ void dibujaPantallaInicio() {
   RecuadEmo();
   displayButtonsMenu();
   enableButtonsMenu();
-  displayButtonsInicio();
-  enableButtonsInicio();
   displayEmociones();
+  displayButtonsInicio();
   imageMode(CENTER);
   displayImg(4, margrecH - 50 + (recuadreWidth/5), margrecV+280, 100, 100);
   displayImg(5, margrecH - 50 + (recuadreWidth/5)+135, margrecV+280, 100, 100);
@@ -79,7 +78,6 @@ void dibujaPantallaPersonas() {
   Bannerinici();
   displayButtonsMenu();
   enableButtonsMenu();
-  Personas();
   displayButtonsPersonas();
   enableButtonsPersonas();
   popStyle();
@@ -119,10 +117,14 @@ void dibujaPantallaPersp() {
   displayButtonsMenu();
   enableButtonsMenu();
   recuadEmo2();
-  initButtonsPines();
-  displayButtonsPines();
+  initButtonsPersp();
+  displayButtonsPersp();
+  imageMode(CENTER);
+  displayImg(19, margrecH - 50 + (recuadreWidth/5), margrecV+280, 70, 70);
+  displayImg(20, margrecH - 50 + (recuadreWidth/5)+135, margrecV+280, 70, 70);
+  displayImg(21, margrecH - 50 + (recuadreWidth/5)+265, margrecV+280, 70, 70);
   popStyle();
 }
 
-void dibujaPantallaFinal(){
+void dibujaPantallaFinal() {
 }

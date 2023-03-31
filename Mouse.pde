@@ -21,46 +21,23 @@ void mousePressed() {
     eventosPantallaContraseña();
   } else if (pantalla==PANTALLA.PINES) {
     eventosPantallaPines();
+  } else if (pantalla == PANTALLA.PERSP) {
+    eventosPantallaPersp();
   }
 }
 
 void eventosPantallaInicio() {
   if (siguiente.mouseOverButton() && siguiente.enabled) {
     pantalla = PANTALLA.PINES;
-  } else if (mfeliz.onMouseOver()) {
-    mfeliz.toggle();
-    feliz.setChecked(false);
-    meh.setChecked(false);
-    triste.setChecked(false);
-    mtriste.setChecked(false);
-  } else if (feliz.onMouseOver()) {
-    feliz.toggle();
-    mfeliz.setChecked(false);
-    meh.setChecked(false);
-    triste.setChecked(false);
-    mtriste.setChecked(false);
-  } else if (meh.onMouseOver()) {
-    meh.toggle();
-    mfeliz.setChecked(false);
-    feliz.setChecked(false);
-    triste.setChecked(false);
-    mtriste.setChecked(false);
-  } else if (triste.onMouseOver()) {
-    triste.toggle();
-    mfeliz.setChecked(false);
-    meh.setChecked(false);
-    feliz.setChecked(false);
-    mtriste.setChecked(false);
-  } else if (mtriste.onMouseOver()) {
-    mtriste.toggle();
-    mfeliz.setChecked(false);
-    meh.setChecked(false);
-    triste.setChecked(false);
-    feliz.setChecked(false);
-  }
-  else if (siguiente.mouseOverButton() && siguiente.enabled) {
+  } else if (siguiente.mouseOverButton() && siguiente.enabled) {
     pantalla = PANTALLA.PINES;
-  } 
+  }
+  emociones.updateOnClick();
+  if (emociones.numeroSelecionados()>0) {
+    siguiente.setEnabled(true);
+  } else {
+    siguiente.setEnabled(false);
+  }
 }
 
 void eventosPantallaContraseña() {
@@ -73,9 +50,7 @@ void eventosPantallaContraseña() {
 
 void eventosPantallaPines() {
   if (siguiente.mouseOverButton() && siguiente.enabled) {
-    println("SIGUIENTE");
     pantalla = PANTALLA.PERSP;
-    println(pantalla);
   } else if (atras.mouseOverButton() && atras.enabled) {
     pantalla = PANTALLA.INICIO;
   } else if (aeroplane.onMouseOver()) {
@@ -101,14 +76,20 @@ void eventosPantallaPines() {
   }
 }
 
-void eventosPantallaPersp(){
+void eventosPantallaPersp() {
   if (siguiente.mouseOverButton() && siguiente.enabled) {
     pantalla = PANTALLA.FINAL;
-    println(pantalla);
   } else if (atras.mouseOverButton() && atras.enabled) {
     pantalla = PANTALLA.PINES;
+  } else if (sandra.onMouseOver()) {
+    sandra.toggle();
+  } else if (manu.onMouseOver()) {
+    manu.toggle();
+  } else if (perro.onMouseOver()) {
+    perro.toggle();
   }
 }
+
 
 
 

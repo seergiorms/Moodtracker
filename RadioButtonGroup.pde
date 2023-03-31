@@ -27,6 +27,14 @@ class RadioButtonGroup {
     }
   }
   
+  void display1(){
+    for(int i=0; i<rbuttons.length; i++){
+      if(rbuttons[i]!=null){
+        rbuttons[i].display();
+      }
+    }
+  }
+  
   void updateOnClick(){
     if(clickOnOneRadioButton()){
       for(int i=0; i<rbuttons.length; i++){
@@ -49,5 +57,17 @@ class RadioButtonGroup {
     }
     return false;
   }
+  
+  
+  int numeroSelecionados(){
+    int n =0;
+    for(int i=0; i<rbuttons.length; i++){
+      if(rbuttons[i]!=null && rbuttons[i].checked){
+        n++;
+      }
+    }
+    return n;
+  }
+  
   
 }

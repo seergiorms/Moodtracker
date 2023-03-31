@@ -2,7 +2,7 @@
 class RadioButton {
   
   // Propietats
-  float x, y, r;
+  float x, y, r, d;
   
   // Colors
   color bgColor;
@@ -12,11 +12,12 @@ class RadioButton {
   boolean checked;
   
   // Constructor
-  RadioButton(float x, float y, float r){
+  RadioButton(float x, float y, float r, float d){
     shapeMode(CENTER);
     this.x = x;
     this.y = y;
     this.r = r;
+    this.d = d;
     this.checked = false;
     noStroke();
     this.bgColor = color(255);
@@ -38,7 +39,7 @@ class RadioButton {
     
     if(this.checked){
       fill(checkedColor); noStroke();
-      ellipse(x, y, 1.5*r, 1.5*r);
+      ellipse(x, y, d*r, d*r);
     }
     popStyle();
   }
