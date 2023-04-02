@@ -37,12 +37,12 @@ void initButtons() {
   buttons [11] = new Button("Atrás", margrecH, height - margrecV-105, buttonW, buttonH);
   buttons [12] = new Button("Atrás", margrecH, height - margrecV-105, buttonW, buttonH);
   buttons [13] = new Button("Hecho", margrecH + recuadreWidth/2+ 50, height-margrecV-100, buttonW, buttonH);
-  buttons[14] = new Button("Volver",margrecH + recuadreWidth/2+ 50, height-margrecV-100,buttonW, buttonH);
+  buttons[14] = new Button("Volver", margrecH + recuadreWidth/2+ 50, height-margrecV-100, buttonW, buttonH);
 
 
 
 
-    b1 = buttons[0];
+  b1 = buttons[0];
   inicio = buttons[1];
   resumen = buttons[2];
   personas = buttons[3];
@@ -186,7 +186,7 @@ void enableButtonsInicio1() {
   siguiente1.setEnabled(true);
 }
 
-void displayButtonsFinal(){
+void displayButtonsFinal() {
   volver.display1();
 }
 
