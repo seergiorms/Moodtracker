@@ -9,7 +9,7 @@ RadioButtonGroup emociones, pines, persp;
 
 TextField userText, passText;
 
-Button b1, inicio, resumen, personas, estadisticas, perfil, ajustes, siguiente, seleccionarp, atras, siguiente1, atras1, atras2, hecho, volver;
+Button b1, inicio, resumen, personas, estadisticas, perfil, ajustes, siguiente, seleccionarp, atras, siguiente1, atras1, atras2, hecho, volver, volver1;
 RadioButton mfeliz, feliz, meh, triste, mtriste, aeroplane, divingmask, luggage, sun, swimsuit, umbrella, volleyball, beertin, sunglasses, tv, sandra, manu, perro;
 
 void setGUI() {
@@ -22,7 +22,7 @@ void setGUI() {
 }
 
 void initButtons() {
-  buttons = new Button[15];
+  buttons = new Button[16];
   buttons [0] = new Button ("Hecho", margrecH + recuadreWidth/2+ 50, height-margrecV-126, buttonW, buttonH);
   buttons [1] = new Button("Inicio", 50, 60, buttonW, buttonH);
   buttons [2] = new Button("Resumen", 50, 60 + buttonH, buttonW, buttonH);
@@ -38,6 +38,8 @@ void initButtons() {
   buttons [12] = new Button("Atrás", margrecH, height - margrecV-105, buttonW, buttonH);
   buttons [13] = new Button("Hecho", margrecH + recuadreWidth/2+ 50, height-margrecV-100, buttonW, buttonH);
   buttons[14] = new Button("Volver", margrecH + recuadreWidth/2+ 50, height-margrecV-100, buttonW, buttonH);
+  buttons[15] = new Button("Volver", margrecH + recuadreWidth/2+ 50, height-margrecV-100, buttonW, buttonH);
+
 
 
 
@@ -60,6 +62,7 @@ void initButtons() {
   atras2 = buttons[12];
   hecho = buttons[13];
   volver = buttons[14];
+  volver1 = buttons[15];
 }
 
 //construcción de los radiobuttons
@@ -171,8 +174,9 @@ void disableButtonsInicio() {
   siguiente.setEnabled(false);
 }
 
-
-
+void displayButtonsDresumen(){
+  volver1.display1();
+}
 
 void disableButtonsInicio1() {
   siguiente1.setEnabled(false);

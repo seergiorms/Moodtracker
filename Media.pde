@@ -5,7 +5,7 @@ PImage[] pic;
 
 // Estableix les imatges de l'App
 void setMedias() {
-  this.pic = new PImage[22];
+  this.pic = new PImage[23];
   this.pic[0] = loadImage("/fondo1.jpg");
   this.pic[1] = loadImage("meh.png");
   this.pic[2] = loadImage("dead.png");
@@ -28,6 +28,7 @@ void setMedias() {
   this.pic[19] = loadImage("sandra.png");
   this.pic[20] = loadImage("manu.png");
   this.pic[21] = loadImage("perro.png");
+  this.pic[22] = loadImage("negro.jpg");
 }
 
 // Getter del número d'imatges

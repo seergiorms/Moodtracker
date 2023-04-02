@@ -60,6 +60,10 @@ void draw() {
   case FINAL:
     dibujaPantallaFinal();
     break;
+
+  case DRESUMEN:
+    dibujaPantallaDresumen();
+    break;
   }
 
 

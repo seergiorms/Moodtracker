@@ -23,10 +23,19 @@ void mousePressed() {
     eventosPantallaPines();
   } else if (pantalla == PANTALLA.PERSP) {
     eventosPantallaPersp();
-  } else if (pantalla == PANTALLA.FINAL){
+  } else if (pantalla == PANTALLA.FINAL) {
     eventosPantallaFinal();
   }
+
+  if (pantalla == PANTALLA.RESUMEN) {
+    eventosPantallaResumen();
+  }
+
+  if (pantalla == PANTALLA.DRESUMEN) {
+    
+  }
 }
+
 
 void eventosPantallaInicio() {
   if (siguiente.mouseOverButton() && siguiente.enabled) {
@@ -92,9 +101,17 @@ void eventosPantallaPersp() {
   }
 }
 
-void eventosPantallaFinal(){
-  if (volver.mouseOverButton() && volver.enabled){
+void eventosPantallaFinal() {
+  if (volver.mouseOverButton() && volver.enabled) {
     pantalla = PANTALLA.INICIO;
+  }
+}
+
+void eventosPantallaResumen() {
+  c.checkButtons();
+
+  if (c.dateSelected == true) {
+    pantalla = PANTALLA.DRESUMEN;
   }
 }
 

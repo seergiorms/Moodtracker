@@ -1,5 +1,5 @@
 enum PANTALLA {
-  CONTRASEÑA, INICIO, RESUMEN, PERSONAS, ESTADISTICAS, PERFIL, AJUSTES, PINES, PERSP, FINAL
+  CONTRASEÑA, INICIO, RESUMEN, PERSONAS, ESTADISTICAS, PERFIL, AJUSTES, PINES, PERSP, FINAL, DRESUMEN
 };
 
 // Pantalla actual
@@ -134,4 +134,13 @@ void dibujaPantallaFinal() {
   displayButtonsMenu();
   enableButtonsMenu();
   displayButtonsFinal();
+}
+
+void dibujaPantallaDresumen() {
+  pushStyle();
+  dibujaPantallaResumen();
+  tint(255, 127);
+  displayImg(22, banneriWidth, 0, width - banneriWidth, height);
+  
+  popStyle();
 }

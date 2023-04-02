@@ -39,7 +39,7 @@ class DayButton {
     stroke(0); strokeWeight(1);
     rect(x, y, w, h, 5);
     if(selected){
-      fill(200, 100, 100); noStroke();
+      fill(getColorAt(1)); noStroke();
       ellipse(x + w/2, y+h/2, 80, 80);
     }
     fill(0); textSize(24); textAlign(CENTER);
