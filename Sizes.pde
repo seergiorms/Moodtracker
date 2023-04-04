@@ -34,8 +34,8 @@ float usuariomarg = margrecH;
 float banneriWidth = 750,
   banneriHeight = 1080;
 
-float ellipsePersonasH =  200,
-  ellipsePersonasW = 200,
+float ellipseH =  200,
+  ellipseW = 200,
   ellipseX = banneriWidth + 200,
   ellipseX1 = banneriWidth + 450,
   ellipseX2 = banneriWidth + 700,

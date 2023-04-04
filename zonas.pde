@@ -137,24 +137,33 @@ void recuadFinal() {
 }
 
 void recuadDresumen() {
+  pushStyle();
   rect(banneriWidth + 100, 100, width -banneriWidth - 300, banneriHeight - 230, 30, 30, 30, 30);
   fill(getColorAt(6));
   text("Resumen diario:", banneriWidth + 160, 200);
+  popStyle();
 }
 
-void personas(){
+void personas() {
+  pushStyle();
   ellipse(banneriWidth + 200, margrecV + 200, 200, 200);
   ellipse(banneriWidth + 450, margrecV + 200, 200, 200);
   ellipse(banneriWidth + 700, margrecV + 200, 200, 200);
   ellipse(banneriWidth + 950, margrecV + 200, 200, 200);
-  
+
 
   ellipse(banneriWidth + 200, margrecV + 450, 200, 200);
   ellipse(banneriWidth + 450, margrecV + 450, 200, 200);
   ellipse(banneriWidth + 700, margrecV + 450, 200, 200);
   ellipse(banneriWidth + 950, margrecV + 450, 200, 200);
-  
+
 
   ellipse(banneriWidth + 200, margrecV + 700, 200, 200);
   ellipse(banneriWidth + 450, margrecV + 700, 200, 200);
+  textFont(getFontAt(0));
+  textSize(70);
+  textAlign(CENTER);
+  fill(getColorAt(5));
+  text("Tus conocidos:", margrecH-25 + (recuadreWidth/2), margrecV+37);
+  popStyle();
 }

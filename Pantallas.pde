@@ -81,11 +81,10 @@ void dibujaPantallaPersonas() {
   displayButtonsPersonas();
   enableButtonsPersonas();
   imageMode(CENTER);
-  displayImg(19, margrecH - 50 + (recuadreWidth/5), margrecV+280, 70, 70);
-  displayImg(20, margrecH - 50 + (recuadreWidth/5)+135, margrecV+280, 70, 70);
-  displayImg(21, margrecH - 50 + (recuadreWidth/5)+265, margrecV+280, 70, 70);
   personas();
-
+  displayImg(19,ellipseX, ellipseY, ellipseW, ellipseH);
+  displayImg(20, ellipseX1, ellipseY, ellipseW, ellipseH);
+  displayImg(21, ellipseX2, ellipseY, ellipseW, ellipseH);
   popStyle();
 }
 
