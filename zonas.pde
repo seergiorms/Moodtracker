@@ -135,3 +135,7 @@ void recuadFinal() {
   text("Hecho!", margrecH + (recuadreWidth/2), margrecV + (recuadreHeight/2));
   popStyle();
 }
+
+void recuadDresumen(){
+  rect(banneriWidth + 50, 50, width -banneriWidth - 100 , banneriHeight - 100, 30, 30, 30, 30);
+}

@@ -141,6 +141,7 @@ void dibujaPantallaDresumen() {
   dibujaPantallaResumen();
   tint(255, 127);
   displayImg(22, banneriWidth, 0, width - banneriWidth, height);
+  recuadDresumen();
   
   popStyle();
 }
