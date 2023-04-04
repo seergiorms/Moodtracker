@@ -32,7 +32,7 @@ void mousePressed() {
   }
 
   if (pantalla == PANTALLA.DRESUMEN) {
-    
+    eventosPantallaDresumen();
   }
 }
 
@@ -115,6 +115,11 @@ void eventosPantallaResumen() {
   }
 }
 
+void eventosPantallaDresumen(){
+  if(volver1.mouseOverButton() && volver1.enabled){
+    pantalla = PANTALLA.RESUMEN;
+  }
+}
 
 
 void keyPressed() {

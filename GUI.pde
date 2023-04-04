@@ -22,7 +22,7 @@ void setGUI() {
 }
 
 void initButtons() {
-  buttons = new Button[16];
+  buttons = new Button[17];
   buttons [0] = new Button ("Hecho", margrecH + recuadreWidth/2+ 50, height-margrecV-126, buttonW, buttonH);
   buttons [1] = new Button("Inicio", 50, 60, buttonW, buttonH);
   buttons [2] = new Button("Resumen", 50, 60 + buttonH, buttonW, buttonH);
@@ -38,7 +38,7 @@ void initButtons() {
   buttons [12] = new Button("Atrás", margrecH, height - margrecV-105, buttonW, buttonH);
   buttons [13] = new Button("Hecho", margrecH + recuadreWidth/2+ 50, height-margrecV-100, buttonW, buttonH);
   buttons[14] = new Button("Volver", margrecH + recuadreWidth/2+ 50, height-margrecV-100, buttonW, buttonH);
-  buttons[15] = new Button("Volver", margrecH + recuadreWidth/2+ 50, height-margrecV-100, buttonW, buttonH);
+  buttons[15] = new Button("Volver", margrecH + recuadreWidth/2 - 10, height-margrecV - 157, buttonW, buttonH);
 
 
 
@@ -174,7 +174,7 @@ void disableButtonsInicio() {
   siguiente.setEnabled(false);
 }
 
-void displayButtonsDresumen(){
+void displayButtonsDresumen() {
   volver1.display1();
 }
 

@@ -80,6 +80,12 @@ void dibujaPantallaPersonas() {
   enableButtonsMenu();
   displayButtonsPersonas();
   enableButtonsPersonas();
+  imageMode(CENTER);
+  displayImg(19, margrecH - 50 + (recuadreWidth/5), margrecV+280, 70, 70);
+  displayImg(20, margrecH - 50 + (recuadreWidth/5)+135, margrecV+280, 70, 70);
+  displayImg(21, margrecH - 50 + (recuadreWidth/5)+265, margrecV+280, 70, 70);
+  personas();
+
   popStyle();
 }
 
@@ -142,6 +148,6 @@ void dibujaPantallaDresumen() {
   tint(255, 127);
   displayImg(22, banneriWidth, 0, width - banneriWidth, height);
   recuadDresumen();
-  
+  displayButtonsDresumen();
   popStyle();
 }

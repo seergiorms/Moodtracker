@@ -136,6 +136,25 @@ void recuadFinal() {
   popStyle();
 }
 
-void recuadDresumen(){
-  rect(banneriWidth + 50, 50, width -banneriWidth - 100 , banneriHeight - 100, 30, 30, 30, 30);
+void recuadDresumen() {
+  rect(banneriWidth + 100, 100, width -banneriWidth - 300, banneriHeight - 230, 30, 30, 30, 30);
+  fill(getColorAt(6));
+  text("Resumen diario:", banneriWidth + 160, 200);
+}
+
+void personas(){
+  ellipse(banneriWidth + 200, margrecV + 200, 200, 200);
+  ellipse(banneriWidth + 450, margrecV + 200, 200, 200);
+  ellipse(banneriWidth + 700, margrecV + 200, 200, 200);
+  ellipse(banneriWidth + 950, margrecV + 200, 200, 200);
+  
+
+  ellipse(banneriWidth + 200, margrecV + 450, 200, 200);
+  ellipse(banneriWidth + 450, margrecV + 450, 200, 200);
+  ellipse(banneriWidth + 700, margrecV + 450, 200, 200);
+  ellipse(banneriWidth + 950, margrecV + 450, 200, 200);
+  
+
+  ellipse(banneriWidth + 200, margrecV + 700, 200, 200);
+  ellipse(banneriWidth + 450, margrecV + 700, 200, 200);
 }
