@@ -1,3 +1,6 @@
+PImage img;
+String titol="";
+
 
 class Button {
   // Propietats d'un botó:
@@ -112,6 +115,25 @@ class Button {
     }
     popStyle();
   }
+
+
+
+
+  void fileSelected(File selection) {
+    if (selection == null) {
+      println("No s'ha seleccionat cap fitxer.");
+    } else {
+
+      // Obtenim la ruta del fitxer seleccionat
+      String rutaImatge = selection.getAbsolutePath();
+
+      img = loadImage(rutaImatge);  // Actualitzam imatge
+      titol = selection.getName();  // Actualitzam títol
+    }
+  }
+
+
+
 
   // Indica si el cursor està sobre el botó
   boolean mouseOverButton() {

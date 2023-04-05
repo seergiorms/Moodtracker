@@ -9,7 +9,7 @@ RadioButtonGroup emociones, pines, persp;
 
 TextField userText, passText;
 
-Button b1, inicio, resumen, personas, estadisticas, perfil, ajustes, siguiente, seleccionarp, atras, siguiente1, atras1, atras2, hecho, volver, volver1, eliminar;
+Button b1, inicio, resumen, personas, estadisticas, perfil, ajustes, siguiente, seleccionarp, atras, siguiente1, atras1, atras2, hecho, volver, volver1, eliminar, seleccionar1;
 RadioButton mfeliz, feliz, meh, triste, mtriste, aeroplane, divingmask, luggage, sun, swimsuit, umbrella, volleyball, beertin, sunglasses, tv, sandra, manu, perro;
 
 void setGUI() {
@@ -22,7 +22,7 @@ void setGUI() {
 }
 
 void initButtons() {
-  buttons = new Button[17];
+  buttons = new Button[18];
   buttons [0] = new Button ("Hecho", margrecH + recuadreWidth/2+ 50, height-margrecV-126, buttonW, buttonH);
   buttons [1] = new Button("Inicio", 50, 60, buttonW, buttonH);
   buttons [2] = new Button("Resumen", 50, 60 + buttonH, buttonW, buttonH);
@@ -40,6 +40,7 @@ void initButtons() {
   buttons[14] = new Button("Volver", margrecH + recuadreWidth/2+ 50, height-margrecV-100, buttonW, buttonH);
   buttons[15] = new Button("Volver", margrecH + recuadreWidth/2 - 10, height-margrecV - 157, buttonW, buttonH);
   buttons [16] = new Button("Eliminar", margrecH + recuadreWidth/2 - 40 - buttonW, height - margrecV-105, buttonW, buttonH);
+  buttons[17] = new Button("Seleccionar", banneriWidth + banneriWidth/2 + 25, height-margrecV-400, buttonW, buttonH);
 
 
 
@@ -63,6 +64,7 @@ void initButtons() {
   volver = buttons[14];
   volver1 = buttons[15];
   eliminar = buttons[16];
+  seleccionar1 = buttons[17];
   
 }
 
@@ -196,8 +198,6 @@ void displayButtonsFinal() {
 }
 
 
-
-
 void initButtonsPines() {
   pines = new RadioButtonGroup(10);
   pines.setRadioButtons(aeroplane, divingmask, luggage, sun, swimsuit, umbrella, volleyball, beertin, sunglasses, tv);
@@ -254,6 +254,10 @@ void displayTextField1() {
 
 void displayTextField2() {
   passText.displaytext();
+}
+
+void displayButtonsSeleccionarp(){
+  seleccionar1.display1();
 }
 
 void initTexts() {

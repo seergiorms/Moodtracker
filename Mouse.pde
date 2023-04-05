@@ -14,9 +14,9 @@ void mousePressed() {
   } else if (personas.mouseOverButton() && personas.enabled) {
     pantalla = PANTALLA.PERSONAS;
   }
-  
-  
-  
+
+
+
 
   if (pantalla==PANTALLA.INICIO) {
     eventosPantallaInicio();
@@ -29,9 +29,9 @@ void mousePressed() {
   } else if (pantalla == PANTALLA.FINAL) {
     eventosPantallaFinal();
   }
-  
-  
-  
+
+
+
 
   if (pantalla == PANTALLA.RESUMEN) {
     eventosPantallaResumen();
@@ -44,7 +44,12 @@ void mousePressed() {
   if (pantalla == PANTALLA.PERSONAS) {
     eventosPantallaPersonas();
   }
+
+  if (pantalla == PANTALLA.SELECCIONARP) {
+    eventosPantallaSeleccionarp();
+  }
 }
+
 
 
 
@@ -159,6 +164,12 @@ void eventosPantallaPersonas() {
   }
 }
 
+
+void eventosPantallaSeleccionarp() {
+  if (seleccionar1.mouseOverButton() && seleccionar1.enabled) {
+    selectInput("Selecciona una imatge ...", "fileSelected");
+  }
+}
 
 
 

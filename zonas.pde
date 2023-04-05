@@ -169,5 +169,7 @@ void personas() {
 void recuadAviso() {
   rect(banneriWidth + 100, 100, width -banneriWidth - 300, banneriHeight - 230, 30, 30, 30, 30);
   fill(getColorAt(6));
-  text("AVISO", banneriWidth + 160, 200);
+  text("AVISO", banneriWidth + banneriWidth/2 + 50, 200);
+  textSize(20);
+  text("Las imagenes deben ser circulares con un ratio cuadrado, por ejemplo: 20, 20.", banneriWidth + 170, 300);
 }

@@ -158,5 +158,6 @@ void dibujaPantallaSeleccionarp() {
   tint(255, 127);
   displayImg(22, banneriWidth, 0, width - banneriWidth, height);
   recuadAviso();
+  displayButtonsSeleccionarp();
   popStyle();
 }
