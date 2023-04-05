@@ -9,7 +9,7 @@ RadioButtonGroup emociones, pines, persp;
 
 TextField userText, passText;
 
-Button b1, inicio, resumen, personas, estadisticas, perfil, ajustes, siguiente, seleccionarp, atras, siguiente1, atras1, atras2, hecho, volver, volver1;
+Button b1, inicio, resumen, personas, estadisticas, perfil, ajustes, siguiente, seleccionarp, atras, siguiente1, atras1, atras2, hecho, volver, volver1, eliminar;
 RadioButton mfeliz, feliz, meh, triste, mtriste, aeroplane, divingmask, luggage, sun, swimsuit, umbrella, volleyball, beertin, sunglasses, tv, sandra, manu, perro;
 
 void setGUI() {
@@ -31,7 +31,7 @@ void initButtons() {
   buttons [5] = new Button("Perfil", 50, 60 + (4*buttonH), buttonW, buttonH);
   buttons [6] = new Button("Ajustes", 50, 60 + (5*buttonH), buttonW, buttonH);
   buttons [7] = new Button("Siguiente", margrecH + recuadreWidth/2 + 50, height - margrecV - 105, buttonW, buttonH);
-  buttons [8] = new Button("Seleccionar", margrecH + recuadreWidth/2+ 50, height-margrecV-100, buttonW, buttonH);
+  buttons [8] = new Button("Añadir", margrecH + recuadreWidth/2+ 50, height-margrecV-100, buttonW, buttonH);
   buttons [9] = new Button("Atrás", margrecH, height - margrecV-105, buttonW, buttonH);
   buttons [10] = new Button("Siguiente", margrecH + recuadreWidth/2 + 50, height - margrecV - 105, buttonW, buttonH);
   buttons [11] = new Button("Atrás", margrecH, height - margrecV-105, buttonW, buttonH);
@@ -39,8 +39,7 @@ void initButtons() {
   buttons [13] = new Button("Hecho", margrecH + recuadreWidth/2+ 50, height-margrecV-100, buttonW, buttonH);
   buttons[14] = new Button("Volver", margrecH + recuadreWidth/2+ 50, height-margrecV-100, buttonW, buttonH);
   buttons[15] = new Button("Volver", margrecH + recuadreWidth/2 - 10, height-margrecV - 157, buttonW, buttonH);
-
-
+  buttons [16] = new Button("Eliminar", margrecH + recuadreWidth/2 - 40 - buttonW, height - margrecV-105, buttonW, buttonH);
 
 
 
@@ -63,6 +62,8 @@ void initButtons() {
   hecho = buttons[13];
   volver = buttons[14];
   volver1 = buttons[15];
+  eliminar = buttons[16];
+  
 }
 
 //construcción de los radiobuttons
@@ -222,10 +223,12 @@ void displayButtonsPersp() {
 
 void displayButtonsPersonas() {
   seleccionarp.display1();
+  eliminar.display1();
 }
 
 void enableButtonsPersonas() {
   seleccionarp.setEnabled(true);
+  eliminar.setEnabled(true);
 }
 
 void enableButtonsMenu() {

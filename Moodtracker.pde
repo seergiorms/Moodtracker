@@ -64,6 +64,10 @@ void draw() {
   case DRESUMEN:
     dibujaPantallaDresumen();
     break;
+
+  case SELECCIONARP:
+    dibujaPantallaSeleccionarp();
+    break;
   }
 
 

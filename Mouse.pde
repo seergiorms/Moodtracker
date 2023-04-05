@@ -14,6 +14,9 @@ void mousePressed() {
   } else if (personas.mouseOverButton() && personas.enabled) {
     pantalla = PANTALLA.PERSONAS;
   }
+  
+  
+  
 
   if (pantalla==PANTALLA.INICIO) {
     eventosPantallaInicio();
@@ -26,6 +29,9 @@ void mousePressed() {
   } else if (pantalla == PANTALLA.FINAL) {
     eventosPantallaFinal();
   }
+  
+  
+  
 
   if (pantalla == PANTALLA.RESUMEN) {
     eventosPantallaResumen();
@@ -34,7 +40,13 @@ void mousePressed() {
   if (pantalla == PANTALLA.DRESUMEN) {
     eventosPantallaDresumen();
   }
+
+  if (pantalla == PANTALLA.PERSONAS) {
+    eventosPantallaPersonas();
+  }
 }
+
+
 
 
 void eventosPantallaInicio() {
@@ -51,6 +63,9 @@ void eventosPantallaInicio() {
   }
 }
 
+
+
+
 void eventosPantallaContraseña() {
   userText.isPressed();
   passText.isPressed();
@@ -58,6 +73,9 @@ void eventosPantallaContraseña() {
     pantalla = PANTALLA.INICIO;
   }
 }
+
+
+
 
 void eventosPantallaPines() {
   if (siguiente.mouseOverButton() && siguiente.enabled) {
@@ -87,6 +105,9 @@ void eventosPantallaPines() {
   }
 }
 
+
+
+
 void eventosPantallaPersp() {
   if (hecho.mouseOverButton() && hecho.enabled) {
     pantalla = PANTALLA.FINAL;
@@ -101,25 +122,44 @@ void eventosPantallaPersp() {
   }
 }
 
+
+
+
 void eventosPantallaFinal() {
   if (volver.mouseOverButton() && volver.enabled) {
     pantalla = PANTALLA.INICIO;
   }
 }
 
+
+
+
 void eventosPantallaResumen() {
   c.checkButtons();
-
   if (c.dateSelected == true) {
     pantalla = PANTALLA.DRESUMEN;
   }
 }
 
-void eventosPantallaDresumen(){
-  if(volver1.mouseOverButton() && volver1.enabled){
+
+
+
+void eventosPantallaDresumen() {
+  if (volver1.mouseOverButton() && volver1.enabled) {
     pantalla = PANTALLA.RESUMEN;
   }
 }
+
+
+
+
+void eventosPantallaPersonas() {
+  if (seleccionarp.mouseOverButton() && seleccionarp.enabled) {
+    pantalla = PANTALLA.SELECCIONARP;
+  }
+}
+
+
 
 
 void keyPressed() {

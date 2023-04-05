@@ -1,5 +1,5 @@
 enum PANTALLA {
-  CONTRASEÑA, INICIO, RESUMEN, PERSONAS, ESTADISTICAS, PERFIL, AJUSTES, PINES, PERSP, FINAL, DRESUMEN
+  CONTRASEÑA, INICIO, RESUMEN, PERSONAS, ESTADISTICAS, PERFIL, AJUSTES, PINES, PERSP, FINAL, DRESUMEN, SELECCIONARP
 };
 
 // Pantalla actual
@@ -82,7 +82,7 @@ void dibujaPantallaPersonas() {
   enableButtonsPersonas();
   imageMode(CENTER);
   personas();
-  displayImg(19,ellipseX, ellipseY, ellipseW, ellipseH);
+  displayImg(19, ellipseX, ellipseY, ellipseW, ellipseH);
   displayImg(20, ellipseX1, ellipseY, ellipseW, ellipseH);
   displayImg(21, ellipseX2, ellipseY, ellipseW, ellipseH);
   popStyle();
@@ -139,6 +139,7 @@ void dibujaPantallaFinal() {
   displayButtonsMenu();
   enableButtonsMenu();
   displayButtonsFinal();
+  popStyle();
 }
 
 void dibujaPantallaDresumen() {
@@ -148,5 +149,14 @@ void dibujaPantallaDresumen() {
   displayImg(22, banneriWidth, 0, width - banneriWidth, height);
   recuadDresumen();
   displayButtonsDresumen();
+  popStyle();
+}
+
+void dibujaPantallaSeleccionarp() {
+  pushStyle();
+  dibujaPantallaPersonas();
+  tint(255, 127);
+  displayImg(22, banneriWidth, 0, width - banneriWidth, height);
+  recuadAviso();
   popStyle();
 }
