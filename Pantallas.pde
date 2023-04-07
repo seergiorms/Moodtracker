@@ -161,3 +161,12 @@ void dibujaPantallaSeleccionarp() {
   displayButtonsSeleccionarp();
   popStyle();
 }
+
+void dibujaPantallaEliminarp(){
+  pushStyle();
+  dibujaPantallaPersonas();
+  tint(255, 127);
+  displayImg(19, ellipseX, ellipseY, ellipseW, ellipseH);
+  displayImg(20, ellipseX1, ellipseY, ellipseW, ellipseH);
+  displayImg(21, ellipseX2, ellipseY, ellipseW, ellipseH);
+}

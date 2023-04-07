@@ -164,10 +164,16 @@ void eventosPantallaPersonas() {
   }
 }
 
+void eventosPantallaEliminarp(){
+  if ( eliminar.mouseOverButton() && eliminar.enabled){
+    
+  }
+}
 
 void eventosPantallaSeleccionarp() {
   if (seleccionar1.mouseOverButton() && seleccionar1.enabled) {
     selectInput("Selecciona una imatge ...", "fileSelected");
+    pantalla = PANTALLA.PERSONAS;
   }
 }
 
