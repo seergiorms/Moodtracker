@@ -164,8 +164,11 @@ void initFecha(){
 }
 
 void displayFecha(){
-  fecha.display1();
   f.display();
+}
+
+void displayFechaB(){
+  fecha.display1();
 }
 
 //he hecho el boton y el calendario, falta ajustar como se va a hacer el display y juntarlo con el metodo que va a hacer que se pueda dibujar el boton.

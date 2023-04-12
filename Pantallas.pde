@@ -34,6 +34,8 @@ void dibujaPantallaInicio() {
   displayImg(1, margrecH - 50 + (recuadreWidth/5)+265, margrecV+280, 100, 100);
   displayImg(3, margrecH - 50 + (recuadreWidth/5)+395, margrecV+280, 100, 100);
   displayImg(2, margrecH - 50 + (recuadreWidth/5)+525, margrecV+280, 100, 100);
+  displayFecha();
+  displayFechaB();
   popStyle();
 }
 
