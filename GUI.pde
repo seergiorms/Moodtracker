@@ -1,5 +1,7 @@
 //creación de componentes
 Calendari c;
+CalendariPlus f;
+String dataCalendari="";
 Button [] buttons;
 RadioButton[] rbuttons;
 DayButton[] calendari;
@@ -9,7 +11,7 @@ RadioButtonGroup emociones, pines, persp;
 
 TextField userText, passText;
 
-Button b1, inicio, resumen, personas, estadisticas, perfil, ajustes, siguiente, seleccionarp, atras, siguiente1, atras1, atras2, hecho, volver, volver1, eliminar, seleccionar1;
+Button b1, inicio, resumen, personas, estadisticas, perfil, ajustes, siguiente, seleccionarp, atras, siguiente1, atras1, atras2, hecho, volver, volver1, eliminar, seleccionar1, fecha;
 RadioButton mfeliz, feliz, meh, triste, mtriste, aeroplane, divingmask, luggage, sun, swimsuit, umbrella, volleyball, beertin, sunglasses, tv, sandra, manu, perro;
 
 void setGUI() {
@@ -22,7 +24,7 @@ void setGUI() {
 }
 
 void initButtons() {
-  buttons = new Button[18];
+  buttons = new Button[19];
   buttons [0] = new Button ("Hecho", margrecH + recuadreWidth/2+ 50, height-margrecV-126, buttonW, buttonH);
   buttons [1] = new Button("Inicio", 50, 60, buttonW, buttonH);
   buttons [2] = new Button("Resumen", 50, 60 + buttonH, buttonW, buttonH);
@@ -41,6 +43,8 @@ void initButtons() {
   buttons[15] = new Button("Volver", margrecH + recuadreWidth/2 - 10, height-margrecV - 157, buttonW, buttonH);
   buttons [16] = new Button("Eliminar", margrecH + recuadreWidth/2 - 40 - buttonW, height - margrecV-105, buttonW, buttonH);
   buttons[17] = new Button("Seleccionar", banneriWidth + banneriWidth/2 + 25, height-margrecV-400, buttonW, buttonH);
+  buttons[18] = new Button("Calendario", banneriWidth + banneriWidth/2 + 25, height-margrecV-400, buttonW, buttonH);
+
 
 
 
@@ -65,7 +69,7 @@ void initButtons() {
   volver1 = buttons[15];
   eliminar = buttons[16];
   seleccionar1 = buttons[17];
-  
+  fecha = buttons[18];
 }
 
 //construcción de los radiobuttons
@@ -152,6 +156,20 @@ void disableCalendari() {
 void displayCalendari() {
   c.display();
 }
+
+//fecha
+
+void initFecha(){
+ f = new CalendariPlus(margrecH, margrecV + 120, 700,550);
+}
+
+void displayFecha(){
+  fecha.display1();
+  f.display();
+}
+
+//he hecho el boton y el calendario, falta ajustar como se va a hacer el display y juntarlo con el metodo que va a hacer que se pueda dibujar el boton.
+
 void disableButtons() {
   for (int i = 0; i<buttons.length; i++) {
     buttons[i].setEnabled(false);
@@ -256,7 +274,7 @@ void displayTextField2() {
   passText.displaytext();
 }
 
-void displayButtonsSeleccionarp(){
+void displayButtonsSeleccionarp() {
   seleccionar1.display1();
 }
 
