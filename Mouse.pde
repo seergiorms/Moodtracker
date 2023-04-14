@@ -22,8 +22,8 @@ void mousePressed() {
     eventosPantallaInicio1();
   } else if (pantalla == PANTALLA.INICIO) {
     eventosPantallaInicio();
-  } else if (pantalla==PANTALLA.CONTRASEÑA) {
-    eventosPantallaContraseña();
+  } else if (pantalla==PANTALLA.CONTRASENA) {
+    eventosPantallaContraseNa();
   } else if (pantalla==PANTALLA.PINES) {
     eventosPantallaPines();
   } else if (pantalla == PANTALLA.PERSP) {
@@ -64,9 +64,11 @@ void eventosPantallaInicio() {
     f.prevMonth();
   }
   if (f.bOK.mouseOverButton() && f.dateSelected) {
-    dataCalendari = c.selectedDay +"/"+ c.selectedMonth + "/"+ c.selectedYear;
+    
+    dataCalendari = f.selectedDay +"/"+ f.selectedMonth + "/"+ f.selectedYear;
     f.visible = false;
   }
+  f.checkButtons();
 }
 
 
@@ -89,7 +91,7 @@ void eventosPantallaInicio1() {
 
 
 
-void eventosPantallaContraseña() {
+void eventosPantallaContraseNa() {
   userText.isPressed();
   passText.isPressed();
   if (b1.mouseOverButton() && b1.enabled && comprovaLogin() == true) {

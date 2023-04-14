@@ -213,7 +213,7 @@ class CalendariPlus {
         fill(0); 
         textSize(24); 
         textAlign(RIGHT);
-        text(dateText, x+w, y - 30);
+        text(dateText, x+w, y - 130);
       }
       
       // Dibuixa els botons

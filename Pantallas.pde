@@ -1,11 +1,11 @@
 enum PANTALLA {
-  CONTRASEÑA, INICIO, INICIO1, RESUMEN, PERSONAS, ESTADISTICAS, PERFIL, AJUSTES, PINES, PERSP, FINAL, DRESUMEN, SELECCIONARP
+  CONTRASENA, INICIO, INICIO1, RESUMEN, PERSONAS, ESTADISTICAS, PERFIL, AJUSTES, PINES, PERSP, FINAL, DRESUMEN, SELECCIONARP
 };
 
 // Pantalla actual
 PANTALLA pantalla = PANTALLA.INICIO;
 
-void dibujaPantallaContraseña() {
+void dibujaPantallaContraseNa() {
   pushStyle();
   displayImg(8, 0, 0, width, height);
   Recuadreinici();
@@ -27,7 +27,7 @@ void dibujaPantallaInicio() {
   RecuadFecha();
   displayButtonsMenu();
   enableButtonsMenu();
-  initFecha();
+  //initFecha();
   f.display();
   popStyle();
 }
