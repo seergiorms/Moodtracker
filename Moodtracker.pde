@@ -1,3 +1,4 @@
+
 boolean logged = false;
 
 // Dimensions dels botons
@@ -27,6 +28,10 @@ void draw() {
 
   case INICIO:
     dibujaPantallaInicio();
+    break;
+
+  case INICIO1:
+    dibujaPantallaInicio1();
     break;
 
   case PINES:

@@ -18,7 +18,9 @@ void mousePressed() {
 
 
 
-  if (pantalla==PANTALLA.INICIO) {
+  if (pantalla==PANTALLA.INICIO1) {
+    eventosPantallaInicio1();
+  } else if (pantalla == PANTALLA.INICIO) {
     eventosPantallaInicio();
   } else if (pantalla==PANTALLA.CONTRASEÑA) {
     eventosPantallaContraseña();
@@ -55,11 +57,27 @@ void mousePressed() {
 
 
 void eventosPantallaInicio() {
+  if (f.bNext.mouseOverButton()) {
+    f.nextMonth();
+  }
+  if (f.bPrev.mouseOverButton()) {
+    f.prevMonth();
+  }
+  if (f.bOK.mouseOverButton() && f.dateSelected) {
+    dataCalendari = c.selectedDay +"/"+ c.selectedMonth + "/"+ c.selectedYear;
+    f.visible = false;
+  }
+}
+
+
+
+
+
+void eventosPantallaInicio1() {
   if (siguiente.mouseOverButton() && siguiente.enabled) {
     pantalla = PANTALLA.PINES;
-  } else if (siguiente.mouseOverButton() && siguiente.enabled) {
-    pantalla = PANTALLA.PINES;
   }
+
   emociones.updateOnClick();
   if (emociones.numeroSelecionados()>0) {
     siguiente.setEnabled(true);
@@ -164,9 +182,8 @@ void eventosPantallaPersonas() {
   }
 }
 
-void eventosPantallaEliminarp(){
-  if ( eliminar.mouseOverButton() && eliminar.enabled){
-    
+void eventosPantallaEliminarp() {
+  if ( eliminar.mouseOverButton() && eliminar.enabled) {
   }
 }
 

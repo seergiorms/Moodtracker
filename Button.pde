@@ -116,7 +116,41 @@ class Button {
     popStyle();
   }
 
+  void display3() {
+    pushStyle();
+    textSize(25);
+    if (!enabled) {
+      fill(fillColorDisabled);  // Color desabilitat
+    } else if (mouseOverButton()) {
+      cursor(HAND);
+      fill(fillColorOver1);   // Color quan ratolí a sobre
+    } else {
+      cursor(ARROW);
+      fill(fillColor1);   // Color actiu però ratolí fora
+    }
+    stroke(strokeColor1);
+    strokeWeight(2);        //Color i gruixa del contorn
+    rect(this.x, this.y, this.w, this.h, 10);    // Rectangle del botó
+    // Text (color, alineació i mida)
 
+
+    if (!enabled) {
+      fill(getColorAt(5));
+      textAlign(CENTER);
+      text(textBoto, this.x + this.w/2, this.y + this.h/2 + 10);
+    } else if (mouseOverButton()) {
+      cursor(HAND);
+      fill(getColorAt(4));
+      textAlign(CENTER);
+      text(textBoto, this.x + this.w/2, this.y + this.h/2 + 10);
+    } else {
+      cursor(ARROW);
+      fill(getColorAt(5));
+      textAlign(CENTER);
+      text(textBoto, this.x + this.w/2, this.y + this.h/2 + 10);
+    }
+    popStyle();
+  }
 
 
   void fileSelected(File selection) {

@@ -5,13 +5,12 @@ String dataCalendari="";
 Button [] buttons;
 RadioButton[] rbuttons;
 DayButton[] calendari;
-float[] values = {400, 600, 100, 300};
-color[] colorsd = {color(0, 0, 255), color(50, 50, 200), color(255, 0, 0), color(0, 255, 0)};
+DayButton[] calendariPlus;
 RadioButtonGroup emociones, pines, persp;
 
 TextField userText, passText;
 
-Button b1, inicio, resumen, personas, estadisticas, perfil, ajustes, siguiente, seleccionarp, atras, siguiente1, atras1, atras2, hecho, volver, volver1, eliminar, seleccionar1, fecha;
+Button b1, inicio, resumen, personas, estadisticas, perfil, ajustes, siguiente, seleccionarp, atras, siguiente1, atras1, atras2, hecho, volver, volver1, eliminar, seleccionar1, fecha, bNext, bOK, bPrev;
 RadioButton mfeliz, feliz, meh, triste, mtriste, aeroplane, divingmask, luggage, sun, swimsuit, umbrella, volleyball, beertin, sunglasses, tv, sandra, manu, perro;
 
 void setGUI() {
@@ -43,7 +42,8 @@ void initButtons() {
   buttons[15] = new Button("Volver", margrecH + recuadreWidth/2 - 10, height-margrecV - 157, buttonW, buttonH);
   buttons [16] = new Button("Eliminar", margrecH + recuadreWidth/2 - 40 - buttonW, height - margrecV-105, buttonW, buttonH);
   buttons[17] = new Button("Seleccionar", banneriWidth + banneriWidth/2 + 25, height-margrecV-400, buttonW, buttonH);
-  buttons[18] = new Button("Calendario", banneriWidth + banneriWidth/2 + 25, height-margrecV-400, buttonW, buttonH);
+  buttons[18]= new Button("Calendario", margrecH + 25, margrecV + 200, buttonW, buttonH);
+
 
 
 
@@ -159,19 +159,16 @@ void displayCalendari() {
 
 //fecha
 
-void initFecha(){
- f = new CalendariPlus(margrecH, margrecV + 120, 700,550);
-}
-
-void displayFecha(){
-  f.display();
-}
-
 void displayFechaB(){
   fecha.display1();
 }
 
-//he hecho el boton y el calendario, falta ajustar como se va a hacer el display y juntarlo con el metodo que va a hacer que se pueda dibujar el boton.
+
+
+void initFecha() {
+  f = new CalendariPlus(margrecH + 25, margrecV + 300,700,550);
+}
+
 
 void disableButtons() {
   for (int i = 0; i<buttons.length; i++) {

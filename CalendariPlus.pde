@@ -26,7 +26,7 @@ class CalendariPlus {
   int x, y, w, h;
 
   // Visibilitat del calendari
-  boolean visible = false;
+  boolean visible = true;
 
 
   // Constructor
@@ -65,9 +65,9 @@ class CalendariPlus {
     this.h = h;
     createCalendar(x, y, w, h);
     
-    bNext = new Button("Seguent", x+ w/3, y -70, 100, 50);
-    bPrev = new Button("Anterior", x+w/3+100, y - 70, 100, 50);
-    bOK   = new Button("OK", x+w/3+200, y - 70, 50, 50);
+    bNext = new Button("Siguiente", x+ w/3, y -70, 150, 50);
+    bPrev = new Button("Anterior", x+w/3+160, y - 70, 150, 50);
+    bOK   = new Button("OK", x+w/3+320, y - 70, 50, 50);
   }
 
   // Setters
@@ -217,9 +217,9 @@ class CalendariPlus {
       }
       
       // Dibuixa els botons
-      bNext.display();
-      bPrev.display();
-      bOK.display();
+      bNext.display3();
+      bPrev.display3();
+      bOK.display3();
       popStyle();
     }
     

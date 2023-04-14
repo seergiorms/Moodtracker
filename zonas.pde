@@ -84,6 +84,30 @@ void RecuadEmo() {
   popStyle();
 }
 
+void RecuadFecha() {
+  pushStyle();
+  noStroke();
+  fill(255);
+  rect(margrecH-25, margrecV+100, recuadreWidth, recuadreHeight - 100, 30, 30, 30, 30);
+  textFont(getFontAt(1));
+  fill(getColorAt(6));
+  textSize(30);
+  text("Selecciona la fecha actual:", margrecH + 25, margrecV + 170);
+  textFont(getFontAt(0));
+  textSize(70);
+  textAlign(CENTER);
+  fill(getColorAt(5));
+  text("¿Cómo te sientes hoy?", margrecH-25 + (recuadreWidth/2), margrecV+37);
+  fill(255);
+  stroke(0);
+  rect(margrecH + 25, margrecV + 800, 200, 50, 5);
+  fill(0);
+  textAlign(LEFT);
+  textSize(24);
+  text(dataCalendari, 190, 45);
+  popStyle();
+}
+
 void recuadEmo2() {
   pushStyle();
   noStroke();
@@ -140,6 +164,7 @@ void recuadDresumen() {
   pushStyle();
   rect(banneriWidth + 100, 100, width -banneriWidth - 300, banneriHeight - 230, 30, 30, 30, 30);
   fill(getColorAt(6));
+  textSize(30);
   text("Resumen diario:", banneriWidth + 160, 200);
   popStyle();
 }

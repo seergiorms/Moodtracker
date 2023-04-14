@@ -1,5 +1,5 @@
 enum PANTALLA {
-  CONTRASEÑA, INICIO, RESUMEN, PERSONAS, ESTADISTICAS, PERFIL, AJUSTES, PINES, PERSP, FINAL, DRESUMEN, SELECCIONARP
+  CONTRASEÑA, INICIO, INICIO1, RESUMEN, PERSONAS, ESTADISTICAS, PERFIL, AJUSTES, PINES, PERSP, FINAL, DRESUMEN, SELECCIONARP
 };
 
 // Pantalla actual
@@ -19,7 +19,20 @@ void dibujaPantallaContraseña() {
   popStyle();
 }
 
+
 void dibujaPantallaInicio() {
+  pushStyle();
+  displayImg(7, 0, 0, width, height);
+  Bannerinici();
+  RecuadFecha();
+  displayButtonsMenu();
+  enableButtonsMenu();
+  initFecha();
+  f.display();
+  popStyle();
+}
+
+void dibujaPantallaInicio1() {
   pushStyle();
   displayImg(7, 0, 0, width, height);
   Bannerinici();
@@ -34,8 +47,6 @@ void dibujaPantallaInicio() {
   displayImg(1, margrecH - 50 + (recuadreWidth/5)+265, margrecV+280, 100, 100);
   displayImg(3, margrecH - 50 + (recuadreWidth/5)+395, margrecV+280, 100, 100);
   displayImg(2, margrecH - 50 + (recuadreWidth/5)+525, margrecV+280, 100, 100);
-  displayFecha();
-  displayFechaB();
   popStyle();
 }
 
@@ -164,7 +175,7 @@ void dibujaPantallaSeleccionarp() {
   popStyle();
 }
 
-void dibujaPantallaEliminarp(){
+void dibujaPantallaEliminarp() {
   pushStyle();
   dibujaPantallaPersonas();
   tint(255, 127);
