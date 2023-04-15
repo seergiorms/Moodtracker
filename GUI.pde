@@ -10,7 +10,7 @@ RadioButtonGroup emociones, pines, persp;
 
 TextField userText, passText;
 
-Button b1, inicio, resumen, personas, estadisticas, perfil, ajustes, siguiente, seleccionarp, atras, siguiente1, atras1, atras2, hecho, volver, volver1, eliminar, seleccionar1, fecha, bNext, bOK, bPrev;
+Button b1, inicio, resumen, personas, estadisticas, perfil, ajustes, siguiente, seleccionarp, atras, siguiente1, atras1, atras2, hecho, volver, volver1, eliminar, seleccionar1, fecha, bNext, bOK, bPrev, atras3;
 RadioButton mfeliz, feliz, meh, triste, mtriste, aeroplane, divingmask, luggage, sun, swimsuit, umbrella, volleyball, beertin, sunglasses, tv, sandra, manu, perro;
 
 void setGUI() {
@@ -24,7 +24,7 @@ void setGUI() {
 }
 
 void initButtons() {
-  buttons = new Button[19];
+  buttons = new Button[20];
   buttons [0] = new Button ("Hecho", margrecH + recuadreWidth/2+ 50, height-margrecV-126, buttonW, buttonH);
   buttons [1] = new Button("Inicio", 50, 60, buttonW, buttonH);
   buttons [2] = new Button("Resumen", 50, 60 + buttonH, buttonW, buttonH);
@@ -44,6 +44,8 @@ void initButtons() {
   buttons [16] = new Button("Eliminar", margrecH + recuadreWidth/2 - 40 - buttonW, height - margrecV-105, buttonW, buttonH);
   buttons[17] = new Button("Seleccionar", banneriWidth + banneriWidth/2 + 25, height-margrecV-400, buttonW, buttonH);
   buttons[18]= new Button("Calendario", margrecH + 25, margrecV + 200, buttonW, buttonH);
+  buttons [19] = new Button("Atrás", margrecH, height - margrecV-105, buttonW, buttonH);
+
 
 
 
@@ -71,6 +73,7 @@ void initButtons() {
   eliminar = buttons[16];
   seleccionar1 = buttons[17];
   fecha = buttons[18];
+  atras3 = buttons[19];
 }
 
 //construcción de los radiobuttons
@@ -160,14 +163,14 @@ void displayCalendari() {
 
 //fecha
 
-void displayFechaB(){
+void displayFechaB() {
   fecha.display1();
 }
 
 
 
 void initFecha() {
-  f = new CalendariPlus(margrecH + 25, margrecV + 300,700,550);
+  f = new CalendariPlus(margrecH + 25, margrecV + 300, 700, 550);
 }
 
 
@@ -186,6 +189,7 @@ void displayButtonsIniciales() {
 
 void displayButtonsInicio() {
   siguiente.display1();
+  atras3.display1();
 }
 
 void enableButtonsInicio() {
@@ -256,7 +260,7 @@ void enableButtonsMenu() {
   personas.setEnabled(true);
   estadisticas.setEnabled(true);
   perfil.setEnabled(true);
-  ajustes.setEnabled(true);
+  ajustes.setEnabled(false);
 }
 void displayButtonsMenu() {
   inicio.display2();
@@ -264,7 +268,6 @@ void displayButtonsMenu() {
   personas.display2();
   estadisticas.display2();
   perfil.display2();
-  ajustes.display2();
 }
 
 void displayTextField1() {

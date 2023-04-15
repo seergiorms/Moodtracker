@@ -104,7 +104,7 @@ void RecuadFecha() {
   fill(0);
   textAlign(LEFT);
   textSize(24);
-  text(dataCalendari, 190, 45);
+  text(dataCalendari, margrecH + 70, margrecV + 830);
   popStyle();
 }
 

@@ -66,7 +66,7 @@ void eventosPantallaInicio() {
   if (f.bOK.mouseOverButton() && f.dateSelected) {
     
     dataCalendari = f.selectedDay +"/"+ f.selectedMonth + "/"+ f.selectedYear;
-    f.visible = false;
+    pantalla = PANTALLA.INICIO1;
   }
   f.checkButtons();
 }
@@ -78,6 +78,10 @@ void eventosPantallaInicio() {
 void eventosPantallaInicio1() {
   if (siguiente.mouseOverButton() && siguiente.enabled) {
     pantalla = PANTALLA.PINES;
+  }
+  
+  if (atras3.mouseOverButton() && atras3.enabled){
+    pantalla = PANTALLA.INICIO;
   }
 
   emociones.updateOnClick();
