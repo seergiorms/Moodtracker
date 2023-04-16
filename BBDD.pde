@@ -24,7 +24,22 @@ void connexioBBDD() {
   }
 }
 
-void insertPersona(int n, String foto) {
+void insertFotoPersona(int n, String foto) {
   String q =" INSERT INTO `persona` (`idPersona`, `nombrePersona`) VALUES ('"+n+"', '"+foto+"')";
+  msql.query(q);
+}
+
+void insertFecha(String f, int n) {
+  String q ="INSERT INTO `registro` (`Fecha`, `Emocion_idEmocion`) VALUES ('"+f+"', '"+n+"')";
+  msql.query(q);
+}
+
+void insertPin(int n, String f){
+  String q = "INSERT INTO `pin_has_registro` (`Pin_idPin`, `Registro_Fecha`, `Pin_idRegistro`) VALUES ('"+n+"', '"+f+"', NULL)";
+  msql.query(q);
+}
+
+void insertPersona(int n, String f){
+  String q = "INSERT INTO `registro_has_persona` (`Registro_Fecha`, `Persona_idPersona`, `Persona_idRegistro`) VALUES ('"+f+"', '"+n+"', NULL)";
   msql.query(q);
 }

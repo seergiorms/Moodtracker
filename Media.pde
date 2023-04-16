@@ -13,7 +13,7 @@ void setMedias() {
   this.pic[4] = loadImage("laugh.png");
   this.pic[5] = loadImage("tongue.png");
   this.pic[6] = loadImage("profile.png");
-  this.pic[7] = loadImage("gradient.png");
+  this.pic[7] = loadImage("gradient.jpg");
   this.pic[8] = loadImage("water.jpg");
   this.pic[9] = loadImage("aeroplane.png");
   this.pic[10] =loadImage("divingmask.png");

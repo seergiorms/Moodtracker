@@ -33,7 +33,7 @@ void initButtons() {
   buttons [5] = new Button("Perfil", 50, 60 + (4*buttonH), buttonW, buttonH);
   buttons [6] = new Button("Ajustes", 50, 60 + (5*buttonH), buttonW, buttonH);
   buttons [7] = new Button("Siguiente", margrecH + recuadreWidth/2 + 50, height - margrecV - 105, buttonW, buttonH);
-  buttons [8] = new Button("ANadir", margrecH + recuadreWidth/2+ 50, height-margrecV-100, buttonW, buttonH);
+  buttons [8] = new Button("Añadir", margrecH + recuadreWidth/2+ 50, height-margrecV-100, buttonW, buttonH);
   buttons [9] = new Button("Atrás", margrecH, height - margrecV-105, buttonW, buttonH);
   buttons [10] = new Button("Siguiente", margrecH + recuadreWidth/2 + 50, height - margrecV - 105, buttonW, buttonH);
   buttons [11] = new Button("Atrás", margrecH, height - margrecV-105, buttonW, buttonH);

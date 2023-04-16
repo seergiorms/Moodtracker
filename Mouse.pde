@@ -64,7 +64,7 @@ void eventosPantallaInicio() {
     f.prevMonth();
   }
   if (f.bOK.mouseOverButton() && f.dateSelected) {
-    
+
     dataCalendari = f.selectedDay +"/"+ f.selectedMonth + "/"+ f.selectedYear;
     pantalla = PANTALLA.INICIO1;
   }
@@ -78,14 +78,17 @@ void eventosPantallaInicio() {
 void eventosPantallaInicio1() {
   if (siguiente.mouseOverButton() && siguiente.enabled) {
     pantalla = PANTALLA.PINES;
+    String rFecha = f.getDateText();
+    int rEmocion = emociones.nombreSeleccionado();
+    insertFecha(rFecha, rEmocion);
   }
-  
-  if (atras3.mouseOverButton() && atras3.enabled){
+
+  if (atras3.mouseOverButton() && atras3.enabled) {
     pantalla = PANTALLA.INICIO;
   }
 
   emociones.updateOnClick();
-  if (emociones.numeroSelecionados()>0) {
+  if (emociones.numeroSeleccionados()>0) {
     siguiente.setEnabled(true);
   } else {
     siguiente.setEnabled(false);
@@ -109,8 +112,13 @@ void eventosPantallaContraseNa() {
 void eventosPantallaPines() {
   if (siguiente.mouseOverButton() && siguiente.enabled) {
     pantalla = PANTALLA.PERSP;
+    int rPines[]  = pines.getPines();
+    String rFecha = f.getDateText();
+    for (int i = 0; i<rPines.length; i++) {
+      insertPin(rPines[i], rFecha);
+    }
   } else if (atras.mouseOverButton() && atras.enabled) {
-    pantalla = PANTALLA.INICIO;
+    pantalla = PANTALLA.INICIO1;
   } else if (aeroplane.onMouseOver()) {
     aeroplane.toggle();
   } else if (divingmask.onMouseOver()) {
@@ -140,6 +148,11 @@ void eventosPantallaPines() {
 void eventosPantallaPersp() {
   if (hecho.mouseOverButton() && hecho.enabled) {
     pantalla = PANTALLA.FINAL;
+    int rPersonas[]  = persp.getPines();
+    String rFecha = f.getDateText();
+    for (int i = 0; i<rPersonas.length; i++) {
+      insertPersona(rPersonas[i], rFecha);
+    }
   } else if (atras2.mouseOverButton() && atras2.enabled) {
     pantalla = PANTALLA.PINES;
   } else if (sandra.onMouseOver()) {

@@ -1,9 +1,11 @@
 import java.util.Calendar;
 
+
+
 class CalendariPlus {
 
   // Textos representatius dels mesos
-  String[] months = {"Jan", "Feb", "Mar", "Apr", "May", "Jun", 
+  String[] months = {"Jan", "Feb", "Mar", "Apr", "May", "Jun",
     "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
 
   // Informació del calendari
@@ -31,7 +33,7 @@ class CalendariPlus {
 
   // Constructor
   CalendariPlus(int x, int y, int w, int h) {
-   
+
 
     this.buttons = new DayButton[37];
 
@@ -45,9 +47,9 @@ class CalendariPlus {
     this.numDaysMonth = cal.getActualMaximum(Calendar.DAY_OF_MONTH);
 
     this.dayOfWeek = cal.get(Calendar.DAY_OF_WEEK);
-    if (dayOfWeek==Calendar.SUNDAY) { 
+    if (dayOfWeek==Calendar.SUNDAY) {
       this.dayOfWeek = 6;
-    } else { 
+    } else {
       this.dayOfWeek  = this.dayOfWeek - 2;
     }
 
@@ -59,12 +61,12 @@ class CalendariPlus {
 
     this.numDaysPrevMonth = cPrev.getActualMaximum(Calendar.DAY_OF_MONTH);
 
-    this.x = x; 
-    this.y = y; 
-    this.w = w; 
+    this.x = x;
+    this.y = y;
+    this.w = w;
     this.h = h;
     createCalendar(x, y, w, h);
-    
+
     bNext = new Button("Siguiente", x+ w/3, y -70, 150, 50);
     bPrev = new Button("Anterior", x+w/3+160, y - 70, 150, 50);
     bOK   = new Button("OK", x+w/3+320, y - 70, 50, 50);
@@ -90,6 +92,11 @@ class CalendariPlus {
     this.selectedYear = y;
   }
 
+  String getDateText() {
+    String dateText = this.selectedYear+"-"+this.selectedMonth+"-"+this.selectedDay;
+    return dateText;
+  }
+
   // Va un mes enrera en el Calendari
   void prevMonth() {
 
@@ -105,9 +112,9 @@ class CalendariPlus {
     this.numDaysMonth = cal.getActualMaximum(Calendar.DAY_OF_MONTH);
 
     this.dayOfWeek = cal.get(Calendar.DAY_OF_WEEK);
-    if (dayOfWeek==Calendar.SUNDAY) { 
+    if (dayOfWeek==Calendar.SUNDAY) {
       this.dayOfWeek = 6;
-    } else { 
+    } else {
       this.dayOfWeek  = this.dayOfWeek - 2;
     }
 
@@ -134,21 +141,21 @@ class CalendariPlus {
         for (int p=firstDay, c=0; p<=numDaysPrevMonth; p++, c++) {
           buttons[nb] = new DayButton(x + c*dayWidth, y + f*dayHeight, dayWidth, dayHeight, p, mes, any);
           buttons[nb].setEnabled(false);
-          cPrev++; 
+          cPrev++;
           nb++;
         }
         for (int c=cPrev; c<7; c++) {
           buttons[nb] = new DayButton(x + c*dayWidth, y + f*dayHeight, dayWidth, dayHeight, numDia, mes, any);
-          numDia++; 
+          numDia++;
           nb++;
         }
         f++;
       } else {
         for (int c=0; c<7; c++) {
           buttons[nb] = new DayButton(x + c*dayWidth, y + f*dayHeight, dayWidth, dayHeight, numDia, mes, any);
-          numDia++; 
+          numDia++;
           nb++;
-          if (numDia>numDaysMonth) { 
+          if (numDia>numDaysMonth) {
             break;
           }
         }
@@ -172,9 +179,9 @@ class CalendariPlus {
     this.numDaysMonth = cal.getActualMaximum(Calendar.DAY_OF_MONTH);
 
     this.dayOfWeek = cal.get(Calendar.DAY_OF_WEEK);
-    if (dayOfWeek==Calendar.SUNDAY) { 
+    if (dayOfWeek==Calendar.SUNDAY) {
       this.dayOfWeek = 6;
-    } else { 
+    } else {
       this.dayOfWeek  = this.dayOfWeek - 2;
     }
 
@@ -194,12 +201,13 @@ class CalendariPlus {
   void display() {
     if (visible) {
       pushStyle();
-      
-      fill(255); noStroke();
+
+      fill(255);
+      noStroke();
       rect(x, y-80, w, h);
-      
-      fill(0); 
-      textSize(36); 
+
+      fill(0);
+      textSize(36);
       textAlign(LEFT);
       text(months[mes-1]+"/"+any, x, y - 30);
       for (DayButton b : buttons) {
@@ -210,20 +218,18 @@ class CalendariPlus {
 
       if (dateSelected) {
         String dateText = this.selectedDay+"/"+this.selectedMonth+"/"+this.selectedYear;
-        fill(0); 
-        textSize(24); 
+        fill(0);
+        textSize(24);
         textAlign(RIGHT);
         text(dateText, x+w, y - 130);
       }
-      
+
       // Dibuixa els botons
       bNext.display3();
       bPrev.display3();
       bOK.display3();
       popStyle();
     }
-    
-    
   }
 
 
