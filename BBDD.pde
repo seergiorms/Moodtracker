@@ -24,6 +24,7 @@ void connexioBBDD() {
   }
 }
 
+//inserts para la BBDD
 void insertFotoPersona(int n, String foto) {
   String q =" INSERT INTO `persona` (`idPersona`, `nombrePersona`) VALUES ('"+n+"', '"+foto+"')";
   msql.query(q);
@@ -42,4 +43,36 @@ void insertPin(int n, String f){
 void insertPersona(int n, String f){
   String q = "INSERT INTO `registro_has_persona` (`Registro_Fecha`, `Persona_idPersona`, `Persona_idRegistro`) VALUES ('"+f+"', '"+n+"', NULL)";
   msql.query(q);
+}
+
+
+//Seleccionar datos para la BBDD
+int getEmocion(String fecha) {
+  String sFecha = fecha.replace("\'", "\\'");
+  String q = "SELECT Emocion_idEmocion FROM Registro WHERE fecha='"+sFecha+"'";
+  msql.query(q);
+  msql.next();
+  return msql.getInt("Emocion_idEmocion");
+}
+
+String getNombre(int idEmocion){
+  String q = "SELECT nombreEmocion FROM Emocion WHERE idEmocion='"+idEmocion+"'";
+  msql.query(q);
+  msql.next();
+  return msql.getString("nombreEmocion");
+}
+
+int getPersona(String Registro_fecha) {
+  String sFecha = Registro_fecha.replace("\'", "\\'");
+  String q = "SELECT Persona_idPersonas FROM registro_has_persona WHERE registro_fecha='"+sFecha+"'";
+  msql.query(q);
+  msql.next();
+  return msql.getInt("Emocion_idEmocion");
+}
+
+String getNombrePersona(int idPersona){
+   String q = "SELECT nombrePersona FROM Persona WHERE idPersona='"+idPersona+"'";
+  msql.query(q);
+  msql.next();
+  return msql.getString("nombrePersona");
 }

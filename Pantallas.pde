@@ -85,6 +85,22 @@ void dibujaPantallaResumen() {
   popStyle();
 }
 
+void dibujaPantallaDresumen() {
+  pushStyle();
+  dibujaPantallaResumen();
+  pushStyle();
+  tint(255, 127);
+  displayImg(22, banneriWidth, 0, width - banneriWidth, height);
+  popStyle();
+  recuadDresumen();
+  displayButtonsDresumen();
+  String fecha = c.getDateText();
+  getNombre(getEmocion(fecha));
+  String nombreEmocion =  getNombre(getEmocion(fecha));
+  displayrImg(nombreEmocion, banneriWidth + 200, 250, 150, 150);
+  popStyle();
+}
+
 void dibujaPantallaPersonas() {
   pushStyle();
   background(getColorAt(0));
@@ -155,15 +171,6 @@ void dibujaPantallaFinal() {
   popStyle();
 }
 
-void dibujaPantallaDresumen() {
-  pushStyle();
-  dibujaPantallaResumen();
-  tint(255, 127);
-  displayImg(22, banneriWidth, 0, width - banneriWidth, height);
-  recuadDresumen();
-  displayButtonsDresumen();
-  popStyle();
-}
 
 void dibujaPantallaSeleccionarp() {
   pushStyle();

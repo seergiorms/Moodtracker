@@ -164,7 +164,7 @@ void recuadDresumen() {
   pushStyle();
   rect(banneriWidth + 100, 100, width -banneriWidth - 300, banneriHeight - 230, 30, 30, 30, 30);
   fill(getColorAt(6));
-  textSize(30);
+  textSize(40);
   text("Resumen diario:", banneriWidth + 160, 200);
   popStyle();
 }

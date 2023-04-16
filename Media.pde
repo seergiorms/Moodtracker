@@ -62,3 +62,8 @@ PImage getImgAt(int i) {
 void displayImg(int i, float x, float y, float w, float h) {
   image(getImgAt(i), x, y, w, h);
 }
+
+void displayrImg(String i, float x, float y, float w, float h){
+  PImage img = loadImage(i);
+  image(img,x,y,w,h);
+}
