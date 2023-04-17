@@ -8,9 +8,9 @@ DayButton[] calendari;
 DayButton[] calendariPlus;
 RadioButtonGroup emociones, pines, persp;
 
-TextField userText, passText;
+TextField userText, passText, userpText, passpText;
 
-Button b1, inicio, resumen, personas, estadisticas, perfil, ajustes, siguiente, seleccionarp, atras, siguiente1, atras1, atras2, hecho, volver, volver1, eliminar, seleccionar1, fecha, bNext, bOK, bPrev, atras3;
+Button b1, inicio, resumen, personas, perfil, perfil1, ajustes, siguiente, seleccionarp, atras, siguiente1, atras1, atras2, hecho, volver, volver1, eliminar, seleccionar1, fecha, bNext, bOK, bPrev, atras3;
 RadioButton mfeliz, feliz, meh, triste, mtriste, aeroplane, divingmask, luggage, sun, swimsuit, umbrella, volleyball, beertin, sunglasses, tv, sandra, manu, perro;
 
 void setGUI() {
@@ -21,6 +21,7 @@ void setGUI() {
   initRadioButtonGroup() ;
   // rButtons();
   initFecha();
+  initTextsPerfil();
 }
 
 void initButtons() {
@@ -29,7 +30,7 @@ void initButtons() {
   buttons [1] = new Button("Inicio", 50, 60, buttonW, buttonH);
   buttons [2] = new Button("Resumen", 50, 60 + buttonH, buttonW, buttonH);
   buttons [3] = new Button("Personas", 50, 60 + (2*buttonH), buttonW, buttonH);
-  buttons [4] = new Button("Estadísticas", 50, 60 + (3*buttonH), buttonW+36, buttonH);
+  buttons [4] = new Button("Perfil", 50, 60 + (3*buttonH),  buttonW, buttonH);
   buttons [5] = new Button("Perfil", 50, 60 + (4*buttonH), buttonW, buttonH);
   buttons [6] = new Button("Ajustes", 50, 60 + (5*buttonH), buttonW, buttonH);
   buttons [7] = new Button("Siguiente", margrecH + recuadreWidth/2 + 50, height - margrecV - 105, buttonW, buttonH);
@@ -55,8 +56,9 @@ void initButtons() {
   inicio = buttons[1];
   resumen = buttons[2];
   personas = buttons[3];
-  estadisticas = buttons[4];
-  perfil = buttons[5];
+  perfil = buttons[4];
+  perfil1 = buttons[5];
+  perfil1.enabled = false;
   ajustes = buttons[6];
   siguiente = buttons[7];
   seleccionarp = buttons[8];
@@ -258,16 +260,16 @@ void enableButtonsMenu() {
   inicio.setEnabled(true);
   resumen.setEnabled(true);
   personas.setEnabled(true);
-  estadisticas.setEnabled(true);
   perfil.setEnabled(true);
+  //perfil.setEnabled(true);
   ajustes.setEnabled(false);
 }
 void displayButtonsMenu() {
   inicio.display2();
   resumen.display2();
   personas.display2();
-  estadisticas.display2();
   perfil.display2();
+  //perfil.display2();
 }
 
 void displayTextField1() {
@@ -285,4 +287,17 @@ void displayButtonsSeleccionarp() {
 void initTexts() {
   userText = new TextField(margusuarioH + 200, margusuarioV, usuarioWidth-200, usuarioHeight);
   passText = new TextField(margusuarioH + 200, margusuarioV + 70, usuarioWidth-200, usuarioHeight);
+}
+
+void initTextsPerfil(){
+  userpText = new TextField(margusuarioH + 110, margusuarioV +100, usuarioWidth-200, usuarioHeight);
+  passpText = new TextField(margusuarioH + 110, margusuarioV + 250, usuarioWidth-200, usuarioHeight);
+}
+
+void displayUsuarioPerfil(){
+  userpText.displaytext();
+}
+
+void displayContraPerfil(){
+  passpText.displaytext();
 }

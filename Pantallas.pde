@@ -7,7 +7,7 @@ PANTALLA pantalla = PANTALLA.INICIO;
 
 void dibujaPantallaContraseNa() {
   pushStyle();
-  displayImg(8, 0, 0, width, height);
+  displayImg(7, 0, 0, width, height);
   Recuadreinici();
   FotoPerfil();
   displayButtonsIniciales();
@@ -63,7 +63,7 @@ void dibujaPantallaPines() {
   displayImg(9, margrecH - 50 + (recuadreWidth/5), margrecV+280, 70, 70);
   displayImg(10, margrecH - 50 + (recuadreWidth/5)+135, margrecV+280, 70, 70);
   displayImg(11, margrecH - 50 + (recuadreWidth/5)+265, margrecV+280, 70, 70);
-  displayImg(10, margrecH - 50 + (recuadreWidth/5)+395, margrecV+280, 70, 70);
+  displayImg(12, margrecH - 50 + (recuadreWidth/5)+395, margrecV+280, 70, 70);
   displayImg(13, margrecH - 50 + (recuadreWidth/5)+525, margrecV+280, 70, 70);
   displayImg(14, margrecH - 50 + (recuadreWidth/5), margrecV+280+135, 70, 70);
   displayImg(15, margrecH - 50 + (recuadreWidth/5)+135, margrecV+280+135, 70, 70);
@@ -98,6 +98,21 @@ void dibujaPantallaDresumen() {
 
   if (idEmocion!=0) {
     displayrImg(nombreEmocion, banneriWidth + 200, 250, 150, 150);
+    for (int i =0; i<idPines.length; i++) {
+      shapeMode(CENTER);
+      imageMode(CENTER);
+      fill(getColorAt(i));
+      ellipse((banneriWidth +(150*i) + 240), 460, 100, 100);
+      displayrImg(nombrePines[i], (banneriWidth +(150*i) + 240), 460, 70, 70);
+    }
+
+    for (int i =0; i<idPersona.length; i++) {
+      shapeMode(CENTER);
+      imageMode(CENTER);
+      fill(getColorAt(i));
+      ellipse((banneriWidth +(150*i) + 240), 580, 100, 100);
+      displayrImg(nombrePersona[i], (banneriWidth +(150*i) + 240), 580, 70, 70);
+    }
   }
 
   popStyle();
@@ -130,10 +145,15 @@ void dibujaPantallaEstadisticas() {
 
 void dibujaPantallaPerfil() {
   pushStyle();
+  updateCursor();
   displayImg(7, 0, 0, width, height);
   Bannerinici();
+  RecuadrePerfil();
+  FotoPerfil();
   displayButtonsMenu();
   enableButtonsMenu();
+  displayUsuarioPerfil();
+  displayContraPerfil();
   popStyle();
 }
 

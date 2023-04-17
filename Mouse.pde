@@ -1,6 +1,10 @@
 String fechaEmocion;
- String nombreEmocion;
- int idEmocion;
+String nombreEmocion;
+int idEmocion;
+String [] nombrePines;
+int [] idPines;
+String [] nombrePersona;
+int [] idPersona;
 
 // En cas de pitjar el ratolí
 void mousePressed() {
@@ -9,9 +13,9 @@ void mousePressed() {
     pantalla = PANTALLA.INICIO;
   } else if (resumen.mouseOverButton() && resumen.enabled) {
     pantalla = PANTALLA.RESUMEN;
-  } else if (estadisticas.mouseOverButton() && estadisticas.enabled) {
-    pantalla = PANTALLA.ESTADISTICAS;
   } else if (perfil.mouseOverButton() && perfil.enabled) {
+    pantalla = PANTALLA.PERFIL;
+  } else if (perfil1.mouseOverButton() && perfil1.enabled) {
     pantalla = PANTALLA.PERFIL;
   } else if (ajustes.mouseOverButton() && ajustes.enabled) {
     pantalla = PANTALLA.AJUSTES;
@@ -53,6 +57,10 @@ void mousePressed() {
 
   if (pantalla == PANTALLA.SELECCIONARP) {
     eventosPantallaSeleccionarp();
+  }
+
+  if (pantalla == PANTALLA.PERFIL) {
+    eventosPantallaPerfil();
   }
 }
 
@@ -184,9 +192,19 @@ void eventosPantallaResumen() {
   c.checkButtons();
   if (c.dateSelected == true) {
     pantalla = PANTALLA.DRESUMEN;
-     fechaEmocion = c.getDateText();
-     idEmocion = getEmocion(fechaEmocion);
-     nombreEmocion =  getNombre(idEmocion);
+    fechaEmocion = c.getDateText();
+    idEmocion = getEmocion(fechaEmocion);
+    nombreEmocion =  getNombre(idEmocion);
+    idPines = getPines(fechaEmocion);
+    nombrePines = new String[idPines.length];
+    idPersona = getPersona(fechaEmocion);
+    nombrePersona = new String[idPersona.length];
+    for (int i =0; i<idPines.length; i++) {
+      nombrePines[i] = getNombrePin(idPines[i]);
+    }
+    for (int i =0; i<idPersona.length; i++) {
+      nombrePersona[i] = getNombrePersona(idPersona[i]);
+    }
   }
 }
 
@@ -220,11 +238,18 @@ void eventosPantallaSeleccionarp() {
   }
 }
 
+void eventosPantallaPerfil() {
+  userpText.isPressed();
+  passpText.isPressed();
+}
+
 
 
 void keyPressed() {
   userText.keyPressed(key, (int)keyCode);
   passText.keyPressed(key, (int)keyCode);
+  userpText.keyPressed(key, (int)keyCode);
+  passpText.keyPressed(key, (int)keyCode);
 
   // Anar un mes enrere
   if (keyCode==LEFT) {

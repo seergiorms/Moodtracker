@@ -16,6 +16,24 @@ void Recuadreinici() {
   popStyle();
 }
 
+void RecuadrePerfil() {
+  shapeMode(CENTER);
+  pushStyle();
+  fill(255);
+  noStroke();
+  rect(margrecH, margrecV, recuadreWidth, recuadreHeight, 30, 30, 30, 30);
+  textFont(getFontAt(0));
+  textSize(60);
+  fill(getColorAt(6));
+  textFont(getFontAt(1));
+  textSize(25);
+  fill(getColorAt(4));
+  textMode(CENTER);
+  text("CAMBIAR USUARIO:", margrecH + recuadreWidth/2 - 125, margusuarioV + 70);
+  text("CAMBIAR CONTRASEÑA:", margrecH + recuadreWidth/2 - 150,margusuarioV + 220);
+  popStyle();
+}
+
 void FotoPerfil() {
   pushStyle();
   imageMode(CENTER);

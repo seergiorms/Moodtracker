@@ -45,6 +45,11 @@ void insertPersona(int n, String f){
   msql.query(q);
 }
 
+void insertPerfil(String nombre, String foto,  String password){
+  String q = "INSERT INTO `perfil` (`Nombre`, `Foto`, `password`) VALUES ('"+nombre+"', '"+foto+"', '"+password+"')";
+  msql.query(q);
+}
+
 
 //Seleccionar datos para la BBDD
 int getEmocion(String fecha) {
@@ -62,16 +67,55 @@ String getNombre(int idEmocion){
   return msql.getString("nombreEmocion");
 }
 
-int getPersona(String Registro_fecha) {
-  String sFecha = Registro_fecha.replace("\'", "\\'");
-  String q = "SELECT Persona_idPersonas FROM registro_has_persona WHERE registro_fecha='"+sFecha+"'";
+ int getNumPines(String fecha) {
+  msql.query("SELECT COUNT(*) AS n FROM pin_has_registro WHERE Registro_fecha = '%s'", fecha );
+  msql.next();
+  int numRows = msql.getInt("n");
+  return numRows;
+}
+
+int [] getPines(String fecha) {
+  int numRows = getNumPines(fecha);
+  int[] data = new int[numRows];
+
+  int nr=0;
+  msql.query("SELECT * FROM pin_has_registro WHERE Registro_fecha = '%s'", fecha );
+  while (msql.next()) {
+    data[nr] = msql.getInt("Pin_idPin");
+    nr++;
+  }
+  return data;
+}
+
+String getNombrePin(int idPin){
+  String q = "SELECT nombrePin FROM Pin WHERE idPin='"+idPin+"'";
   msql.query(q);
   msql.next();
-  return msql.getInt("Emocion_idEmocion");
+  return msql.getString("nombrePin");
+}
+
+int getNumPersonas(String fecha) {
+  msql.query("SELECT COUNT(*) AS n FROM registro_has_persona WHERE Registro_fecha = '%s'", fecha );
+  msql.next();
+  int numRows = msql.getInt("n");
+  return numRows;
+}
+
+int [] getPersona(String fecha) {
+  int numRows = getNumPersonas(fecha);
+  int[] dataPersonas = new int[numRows];
+
+  int nr=0;
+  msql.query("SELECT * FROM registro_has_persona WHERE Registro_fecha = '%s'", fecha );
+  while (msql.next()) {
+    dataPersonas[nr] = msql.getInt("Persona_idPersona");
+    nr++;
+  }
+  return dataPersonas;
 }
 
 String getNombrePersona(int idPersona){
-   String q = "SELECT nombrePersona FROM Persona WHERE idPersona='"+idPersona+"'";
+  String q = "SELECT nombrePersona FROM Persona WHERE idPersona='"+idPersona+"'";
   msql.query(q);
   msql.next();
   return msql.getString("nombrePersona");
