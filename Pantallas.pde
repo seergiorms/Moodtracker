@@ -92,12 +92,14 @@ void dibujaPantallaDresumen() {
   tint(255, 127);
   displayImg(22, banneriWidth, 0, width - banneriWidth, height);
   popStyle();
+
   recuadDresumen();
   displayButtonsDresumen();
-  String fecha = c.getDateText();
-  getNombre(getEmocion(fecha));
-  String nombreEmocion =  getNombre(getEmocion(fecha));
-  displayrImg(nombreEmocion, banneriWidth + 200, 250, 150, 150);
+
+  if (idEmocion!=0) {
+    displayrImg(nombreEmocion, banneriWidth + 200, 250, 150, 150);
+  }
+
   popStyle();
 }
 

@@ -1,10 +1,9 @@
-
 class RadioButton {
   
-  // Propietats
+  // Propiedades
   float x, y, r, d;
   
-  // Colors
+  // Colores
   color bgColor;
   color borderColor;
   color checkedColor;

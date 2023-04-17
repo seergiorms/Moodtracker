@@ -1,3 +1,7 @@
+String fechaEmocion;
+ String nombreEmocion;
+ int idEmocion;
+
 // En cas de pitjar el ratolí
 void mousePressed() {
 
@@ -180,6 +184,9 @@ void eventosPantallaResumen() {
   c.checkButtons();
   if (c.dateSelected == true) {
     pantalla = PANTALLA.DRESUMEN;
+     fechaEmocion = c.getDateText();
+     idEmocion = getEmocion(fechaEmocion);
+     nombreEmocion =  getNombre(idEmocion);
   }
 }
 
